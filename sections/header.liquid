@@ -74,6 +74,17 @@
       padding-top: 0.5rem;
     }
   }
+
+  .custom-header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .custom-header-menu__item {
+    white-space: nowrap;
+  }
 </style>
 
 {%- style -%}
@@ -138,9 +149,7 @@
   -%}
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
-      if section.settings.menu != blank
-        render 'header-drawer'
-      endif
+      render 'header-drawer'
 
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
         render 'header-search', input_id: 'Search-In-Modal-1'
@@ -180,15 +189,31 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- liquid
-      if section.settings.menu != blank
+    {%- if section.settings.menu != blank -%}
+      {%- liquid
         if section.settings.menu_type_desktop == 'dropdown'
           render 'header-dropdown-menu'
         elsif section.settings.menu_type_desktop != 'drawer'
           render 'header-mega-menu'
         endif
-      endif
-    %}
+      %}
+    {%- else -%}
+      <nav class="header__inline-menu" aria-label="Main navigation">
+        <ul class="list-menu list-menu--inline custom-header-menu" role="list">
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="{{ routes.root_url }}">Home</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="{{ routes.all_products_collection_url }}">Shop / Collection</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="{{ routes.all_products_collection_url }}">Product Details</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="/pages/about-us">About Us</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="/pages/contact-us">Contact Us</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="/pages/faq">FAQ</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="/pages/size-guide">Size Guide</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="{{ shop.shipping_policy.url }}">Shipping Policy</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="{{ shop.refund_policy.url }}">Return & Refund Policy</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="{{ shop.privacy_policy.url }}">Privacy Policy</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset custom-header-menu__item" href="{{ shop.terms_of_service.url }}">Terms & Conditions</a></li>
+        </ul>
+      </nav>
+    {%- endif -%}
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
