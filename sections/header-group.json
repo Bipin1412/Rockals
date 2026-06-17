@@ -37,6 +37,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        ".header__inline-menu {position: absolute; left: 50%; transform: translateX(-50%);}"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
