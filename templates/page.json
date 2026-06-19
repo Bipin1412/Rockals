@@ -134,8 +134,8 @@
         "row_jLEnFx": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
-            "heading": "Row",
+            "caption": "Founder Note",
+            "heading": "Rockals",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "button_label": "Button label",
             "button_link": ""
