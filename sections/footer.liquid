@@ -22,9 +22,7 @@
   endif
 
   assign shipping_policy_url = section.settings.shipping_policy_url
-  if shipping_policy_url == blank and shop.shipping_policy != blank
-    assign shipping_policy_url = shop.shipping_policy.url
-  elsif shipping_policy_url == blank
+  if shipping_policy_url == blank
     assign shipping_policy_url = '/pages/shipping-policy'
   endif
 
@@ -446,7 +444,7 @@
         <h3 id="FooterPoliciesHeading" class="footer__section-heading">{{ section.settings.policies_heading | escape }}</h3>
         <ul class="footer__link-list" role="list">
           <li class="footer__link-item">
-            <a href="/pages/shipping-policy">Shipping Policy</a>
+            <a class="footer__link" href="{{ shipping_policy_url }}">Shipping Policy</a>
           </li>
           <li class="footer__link-item">
             <a class="footer__link" href="{{ return_policy_url }}">Return &amp; Refund Policy</a>
@@ -559,6 +557,7 @@
     {
       "type": "text",
       "id": "shipping_policy_url",
+      "default": "/pages/shipping-policy",
       "label": "Shipping policy URL"
     },
     {

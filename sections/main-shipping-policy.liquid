@@ -1,0 +1,145 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .shipping-policy {
+    background:
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 34%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 2.4rem;
+    padding: clamp(2.4rem, 4vw, 4rem);
+    color: rgb(var(--color-foreground));
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .shipping-policy__eyebrow {
+    margin: 0 0 1.2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .shipping-policy__intro {
+    max-width: 72rem;
+    margin: 0 0 2.4rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    opacity: 0.86;
+  }
+
+  .shipping-policy__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+    margin-top: 2.4rem;
+  }
+
+  .shipping-policy__card {
+    padding: 1.8rem;
+    border-radius: 1.6rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .shipping-policy__card h2 {
+    margin: 0 0 0.8rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .shipping-policy__card p {
+    margin: 0;
+    line-height: 1.8;
+    opacity: 0.82;
+  }
+
+  @media screen and (max-width: 749px) {
+    .shipping-policy__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .shipping-policy {
+      border-radius: 1.8rem;
+      padding: 2rem;
+    }
+
+    .shipping-policy__intro {
+      font-size: 1.6rem;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <div class="shipping-policy">
+    <p class="shipping-policy__eyebrow">ROCKALS Policy</p>
+    <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      {{ page.title | escape }}
+    </h1>
+    <p class="shipping-policy__intro{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      This is placeholder content for the ROCKALS Shipping Policy page. Replace it with your final shipping terms when ready.
+    </p>
+
+    <div class="shipping-policy__grid">
+      <div class="shipping-policy__card">
+        <h2>Processing</h2>
+        <p>Orders are processed within 1 to 3 business days before dispatch.</p>
+      </div>
+      <div class="shipping-policy__card">
+        <h2>Delivery</h2>
+        <p>Standard delivery usually arrives within 3 to 7 business days depending on location.</p>
+      </div>
+      <div class="shipping-policy__card">
+        <h2>Tracking</h2>
+        <p>Once your order ships, you will receive tracking details by email.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shipping policy page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}
