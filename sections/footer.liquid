@@ -25,28 +25,28 @@
   if shipping_policy_url == blank and shop.shipping_policy != blank
     assign shipping_policy_url = shop.shipping_policy.url
   elsif shipping_policy_url == blank
-    assign shipping_policy_url = '/policies/shipping-policy'
+    assign shipping_policy_url = '/pages/shipping-policy'
   endif
 
   assign return_policy_url = section.settings.return_policy_url
   if return_policy_url == blank and shop.refund_policy != blank
     assign return_policy_url = shop.refund_policy.url
   elsif return_policy_url == blank
-    assign return_policy_url = '/policies/refund-policy'
+    assign return_policy_url = '/pages/refund-policy'
   endif
 
   assign privacy_policy_url = section.settings.privacy_policy_url
   if privacy_policy_url == blank and shop.privacy_policy != blank
     assign privacy_policy_url = shop.privacy_policy.url
   elsif privacy_policy_url == blank
-    assign privacy_policy_url = '/policies/privacy-policy'
+    assign privacy_policy_url = '/pages/privacy-policy'
   endif
 
   assign terms_policy_url = section.settings.terms_policy_url
   if terms_policy_url == blank and shop.terms_of_service != blank
     assign terms_policy_url = shop.terms_of_service.url
   elsif terms_policy_url == blank
-    assign terms_policy_url = '/policies/terms-of-service'
+    assign terms_policy_url = '/pages/terms-of-service'
   endif
 
   assign instagram_url = section.settings.instagram_url
