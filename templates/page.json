@@ -59,6 +59,7 @@
         "featured_collection_QJNY9b",
         "featured_collection_6KphwE"
       ],
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "Collections",
