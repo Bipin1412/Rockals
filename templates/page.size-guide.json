@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-rockals-info-page",
+      "settings": {
+        "eyebrow": "ROCKALS Size Guide",
+        "intro": "Dummy content for the Size Guide page. This page can later hold measurement tips, fit notes, and conversion guidance.",
+        "card_1_title": "Measure",
+        "card_1_text": "Measure both feet in the evening for the most accurate result.",
+        "card_2_title": "Compare",
+        "card_2_text": "Compare your measurements with the product size chart before ordering.",
+        "card_3_title": "Tip",
+        "card_3_text": "If you are between sizes, consider the roomier option for comfort."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

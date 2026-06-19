@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-rockals-info-page",
+      "settings": {
+        "eyebrow": "ROCKALS Product Details",
+        "intro": "Dummy content for the Product Details page. This page can later hold fit, materials, sizing notes, and care guidance.",
+        "card_1_title": "Materials",
+        "card_1_text": "Premium materials, refined finishes, and durable construction.",
+        "card_2_title": "Fit",
+        "card_2_text": "Designed for a clean silhouette with everyday comfort.",
+        "card_3_title": "Care",
+        "card_3_text": "Use a soft brush and mild cleaner to maintain the finish."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

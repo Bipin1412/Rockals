@@ -1,0 +1,193 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .rockals-info-page {
+    background:
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 34%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 2.4rem;
+    padding: clamp(2.4rem, 4vw, 4rem);
+    color: rgb(var(--color-foreground));
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .rockals-info-page__eyebrow {
+    margin: 0 0 1.2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .rockals-info-page__intro {
+    max-width: 72rem;
+    margin: 0 0 2.4rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    opacity: 0.86;
+  }
+
+  .rockals-info-page__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+    margin-top: 2.4rem;
+  }
+
+  .rockals-info-page__card {
+    padding: 1.8rem;
+    border-radius: 1.6rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .rockals-info-page__card h2 {
+    margin: 0 0 0.8rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .rockals-info-page__card p {
+    margin: 0;
+    line-height: 1.8;
+    opacity: 0.82;
+  }
+
+  @media screen and (max-width: 749px) {
+    .rockals-info-page__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rockals-info-page {
+      border-radius: 1.8rem;
+      padding: 2rem;
+    }
+
+    .rockals-info-page__intro {
+      font-size: 1.6rem;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <div class="rockals-info-page">
+    <p class="rockals-info-page__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      {{ page.title | escape }}
+    </h1>
+    <p class="rockals-info-page__intro{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {{ section.settings.intro | escape }}
+    </p>
+
+    <div class="rockals-info-page__grid">
+      <div class="rockals-info-page__card">
+        <h2>{{ section.settings.card_1_title | escape }}</h2>
+        <p>{{ section.settings.card_1_text | escape }}</p>
+      </div>
+      <div class="rockals-info-page__card">
+        <h2>{{ section.settings.card_2_title | escape }}</h2>
+        <p>{{ section.settings.card_2_text | escape }}</p>
+      </div>
+      <div class="rockals-info-page__card">
+        <h2>{{ section.settings.card_3_title | escape }}</h2>
+        <p>{{ section.settings.card_3_text | escape }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "ROCKALS info page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "default": "ROCKALS Page",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "intro",
+      "default": "Dummy content for your page. Replace this with the final copy when ready.",
+      "label": "Intro"
+    },
+    {
+      "type": "text",
+      "id": "card_1_title",
+      "default": "Section One",
+      "label": "Card 1 title"
+    },
+    {
+      "type": "text",
+      "id": "card_1_text",
+      "default": "Add your first supporting detail here.",
+      "label": "Card 1 text"
+    },
+    {
+      "type": "text",
+      "id": "card_2_title",
+      "default": "Section Two",
+      "label": "Card 2 title"
+    },
+    {
+      "type": "text",
+      "id": "card_2_text",
+      "default": "Add your second supporting detail here.",
+      "label": "Card 2 text"
+    },
+    {
+      "type": "text",
+      "id": "card_3_title",
+      "default": "Section Three",
+      "label": "Card 3 title"
+    },
+    {
+      "type": "text",
+      "id": "card_3_text",
+      "default": "Add your third supporting detail here.",
+      "label": "Card 3 text"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

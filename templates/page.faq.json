@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-rockals-info-page",
+      "settings": {
+        "eyebrow": "ROCKALS FAQ",
+        "intro": "Dummy content for the FAQ page. This page can later hold answers about shipping, sizing, returns, and product care.",
+        "card_1_title": "Orders",
+        "card_1_text": "How long does processing take? How do I track my order?",
+        "card_2_title": "Sizing",
+        "card_2_text": "How does sizing run? What should I do if I am between sizes?",
+        "card_3_title": "Returns",
+        "card_3_text": "What is the return window? How do exchanges work?"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

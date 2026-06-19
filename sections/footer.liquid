@@ -3,7 +3,7 @@
 {%- liquid
   assign quick_link_1_url = section.settings.quick_link_1_url
   if quick_link_1_url == blank
-    assign quick_link_1_url = routes.all_products_collection_url
+    assign quick_link_1_url = '/pages/product-details'
   endif
 
   assign quick_link_2_url = section.settings.quick_link_2_url
