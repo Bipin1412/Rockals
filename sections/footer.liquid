@@ -27,10 +27,8 @@
   endif
 
   assign return_policy_url = section.settings.return_policy_url
-  if return_policy_url == blank and shop.refund_policy != blank
-    assign return_policy_url = shop.refund_policy.url
-  elsif return_policy_url == blank
-    assign return_policy_url = '/pages/refund-policy'
+  if return_policy_url == blank
+    assign return_policy_url = '/pages/return-refund-policy'
   endif
 
   assign privacy_policy_url = section.settings.privacy_policy_url
@@ -41,10 +39,8 @@
   endif
 
   assign terms_policy_url = section.settings.terms_policy_url
-  if terms_policy_url == blank and shop.terms_of_service != blank
-    assign terms_policy_url = shop.terms_of_service.url
-  elsif terms_policy_url == blank
-    assign terms_policy_url = '/pages/terms-of-service'
+  if terms_policy_url == blank
+    assign terms_policy_url = '/pages/terms-conditions'
   endif
 
   assign instagram_url = section.settings.instagram_url
@@ -563,6 +559,7 @@
     {
       "type": "text",
       "id": "return_policy_url",
+      "default": "/pages/return-refund-policy",
       "label": "Return policy URL"
     },
     {
@@ -573,6 +570,7 @@
     {
       "type": "text",
       "id": "terms_policy_url",
+      "default": "/pages/terms-conditions",
       "label": "Terms policy URL"
     },
     {

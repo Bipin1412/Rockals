@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-rockals-info-page",
+      "settings": {
+        "eyebrow": "ROCKALS Policy",
+        "intro": "Dummy content for the Terms & Conditions page. Replace this with your final terms when ready.",
+        "card_1_title": "Use",
+        "card_1_text": "This section can explain how customers may use the website and products.",
+        "card_2_title": "Orders",
+        "card_2_text": "This section can define payment, order acceptance, and fulfillment terms.",
+        "card_3_title": "Liability",
+        "card_3_text": "This section can outline limits, disclaimers, and legal responsibilities."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
