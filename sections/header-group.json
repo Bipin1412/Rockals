@@ -41,7 +41,7 @@
         ".header__inline-menu {position: absolute; left: 50%; transform: translateX(-50%);}"
       ],
       "settings": {
-        "logo_position": "middle-left",
+        "logo_position": "top-left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
