@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-rockals-info-page",
+      "disabled": true,
       "settings": {
         "eyebrow": "ROCKALS FAQ",
         "intro": "Dummy content for the FAQ page. This page can later hold answers about shipping, sizing, returns, and product care.",
