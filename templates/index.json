@@ -63,18 +63,21 @@
       "blocks": {
         "featured_collection_8pTtaK": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": ""
           }
         },
         "featured_collection_KBibKm": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": ""
           }
         },
         "featured_collection_fHYpRP": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": ""
           }
@@ -85,6 +88,7 @@
         "featured_collection_KBibKm",
         "featured_collection_fHYpRP"
       ],
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "",
@@ -111,6 +115,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "products_to_show": 8,
