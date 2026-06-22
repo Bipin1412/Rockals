@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -10,11 +19,24 @@
         "card_2_title": "Compare",
         "card_2_text": "Compare your measurements with the product size chart before ordering.",
         "card_3_title": "Tip",
-        "card_3_text": "If you are between sizes, consider the roomier option for comfort."
+        "card_3_text": "If you are between sizes, consider the roomier option for comfort.",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_xbztbH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"rockals-size-guide\">\n  <h1>ROCKALS Size Guide</h1>\n\n  <div class=\"size-tabs\">\n    <button class=\"active\">Men's</button>\n    <button>Women's</button>\n    <button>Kid's</button>\n    <button>Gender Free</button>\n  </div>\n\n  <h2>Men's Shoe Size Chart</h2>\n  <p>These sneakers run large. We recommend going a half size down.</p>\n\n  <div class=\"table-wrap\">\n    <table>\n      <thead>\n        <tr>\n          <th>US MEN</th>\n          <th>US WOMEN</th>\n          <th>UK</th>\n          <th>EU</th>\n          <th>LENGTH (CM)</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr><td>3</td><td>5</td><td>3</td><td>35</td><td>22</td></tr>\n        <tr><td>3.5</td><td>5.5</td><td>3.5</td><td>36</td><td>22.5</td></tr>\n        <tr><td>4</td><td>6</td><td>4</td><td>36.5</td><td>23</td></tr>\n        <tr><td>4.5</td><td>6.5</td><td>4.5</td><td>37</td><td>23.5</td></tr>\n        <tr><td>5</td><td>7</td><td>5</td><td>37.5</td><td>24</td></tr>\n        <tr><td>6</td><td>8</td><td>6</td><td>39</td><td>24.5</td></tr>\n        <tr><td>7</td><td>9</td><td>7</td><td>40</td><td>25.5</td></tr>\n        <tr><td>8</td><td>10</td><td>8</td><td>41.5</td><td>26.5</td></tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n<style>\n.rockals-size-guide{\n  max-width:1200px;\n  margin:40px auto;\n  padding:30px 20px;\n  font-family:inherit;\n}\n\n.rockals-size-guide h1{\n  text-align:center;\n  font-size:38px;\n  margin-bottom:30px;\n}\n\n.size-tabs{\n  display:grid;\n  grid-template-columns:repeat(4,1fr);\n  border:1px solid #ddd;\n  margin-bottom:35px;\n}\n\n.size-tabs button{\n  padding:18px;\n  border:0;\n  border-right:1px solid #ddd;\n  background:#f8f8f8;\n  font-weight:600;\n  cursor:pointer;\n}\n\n.size-tabs button:last-child{\n  border-right:0;\n}\n\n.size-tabs .active{\n  background:#ffffff;\n}\n\n.rockals-size-guide h2{\n  font-size:32px;\n  margin-bottom:15px;\n}\n\n.rockals-size-guide p{\n  font-size:16px;\n  margin-bottom:25px;\n}\n\n.table-wrap{\n  overflow-x:auto;\n}\n\n.rockals-size-guide table{\n  width:100%;\n  border-collapse:collapse;\n  text-align:center;\n}\n\n.rockals-size-guide th{\n  padding:18px;\n  background:#b7f1f5;\n  color:#000;\n  font-weight:700;\n  border:1px solid #ddd;\n}\n\n.rockals-size-guide td{\n  padding:18px;\n  border:1px solid #ddd;\n}\n\n.rockals-size-guide tbody tr:nth-child(even){\n  background:#f4f4f4;\n}\n\n.rockals-size-guide tbody tr:hover{\n  background:#c9f7fb;\n}\n\n@media(max-width:768px){\n  .size-tabs{\n    grid-template-columns:repeat(2,1fr);\n  }\n\n  .rockals-size-guide h1{\n    font-size:30px;\n  }\n\n  .rockals-size-guide h2{\n    font-size:24px;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_xbztbH"
   ]
 }
