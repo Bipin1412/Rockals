@@ -85,6 +85,16 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_yRgRdp": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.nike-grid{\n  max-width:1400px;\n  margin:40px auto;\n  padding:0 20px;\n  display:grid;\n  grid-template-columns:repeat(4,1fr);\n  gap:16px;\n}\n\n.nike-card{\n  background:#f8f8f8;\n  border:1px solid #e5e5e5;\n  border-radius:12px;\n  overflow:hidden;\n  padding:12px;\n  position:relative;\n}\n\n.badge{\n  position:absolute;\n  top:10px;\n  left:10px;\n  background:#eaeaea;\n  border-radius:20px;\n  padding:4px 8px;\n  font-size:10px;\n}\n\n.nike-card img{\n  width:100%;\n  height:220px;\n  object-fit:cover;\n  margin-top:20px;\n  border-radius:8px;\n}\n\n.product-name{\n  font-size:13px;\n  font-weight:700;\n  margin-top:12px;\n}\n\n.product-sub{\n  font-size:11px;\n  color:#777;\n  margin-top:4px;\n}\n\n.bottom{\n  display:flex;\n  justify-content:space-between;\n  align-items:center;\n  margin-top:10px;\n}\n\n.price{\n  font-weight:700;\n}\n\n.color{\n  width:10px;\n  height:10px;\n  border-radius:50%;\n  background:#d6b4c8;\n  border:1px solid #ccc;\n}\n\n@media(max-width:1024px){\n  .nike-grid{\n    grid-template-columns:repeat(2,1fr);\n  }\n}\n\n@media(max-width:768px){\n  .nike-grid{\n    grid-template-columns:1fr;\n  }\n}\n</style>\n\n<div class=\"nike-grid\">\n\n  <div class=\"nike-card\">\n    <span class=\"badge\">Top Rated</span>\n    <img src=\"https://picsum.photos/500/350?random=1\">\n    <div class=\"product-name\">MEN'S DASHIO A2</div>\n    <div class=\"product-sub\">Mid Yellow/Green</div>\n    <div class=\"bottom\"><span class=\"color\"></span><span class=\"price\">$142</span></div>\n  </div>\n\n  <div class=\"nike-card\">\n    <span class=\"badge\">Top Rated</span>\n    <img src=\"https://picsum.photos/500/350?random=2\">\n    <div class=\"product-name\">MEN'S DASHIO A2</div>\n    <div class=\"product-sub\">Mid Yellow/Green</div>\n    <div class=\"bottom\"><span class=\"color\"></span><span class=\"price\">$135</span></div>\n  </div>\n\n  <div class=\"nike-card\">\n    <span class=\"badge\">Top Rated</span>\n    <img src=\"https://picsum.photos/500/350?random=3\">\n    <div class=\"product-name\">WOMEN'S BREEZER POINT</div>\n    <div class=\"product-sub\">Black / Brown</div>\n    <div class=\"bottom\"><span class=\"color\"></span><span class=\"price\">$154</span></div>\n  </div>\n\n  <div class=\"nike-card\">\n    <span class=\"badge\">Top Rated</span>\n    <img src=\"https://picsum.photos/500/350?random=4\">\n    <div class=\"product-name\">MEN'S DASHIO A2</div>\n    <div class=\"product-sub\">Mid Yellow/Green</div>\n    <div class=\"bottom\"><span class=\"color\"></span><span class=\"price\">$118</span></div>\n  </div>\n\n  <div class=\"nike-card\">\n    <span class=\"badge\">Top Rated</span>\n    <img src=\"https://picsum.photos/500/350?random=5\">\n    <div class=\"product-name\">MEN'S DASHIO A2</div>\n    <div class=\"product-sub\">Mid Yellow/Green</div>\n    <div class=\"bottom\"><span class=\"color\"></span><span class=\"price\">$122</span></div>\n  </div>\n\n  <div class=\"nike-card\">\n    <span class=\"badge\">Top Rated</span>\n    <img src=\"https://picsum.photos/500/350?random=6\">\n    <div class=\"product-name\">MEN'S DASHIO A2</div>\n    <div class=\"product-sub\">Mid Yellow/Green</div>\n    <div class=\"bottom\"><span class=\"color\"></span><span class=\"price\">$118</span></div>\n  </div>\n\n  <div class=\"nike-card\">\n    <span class=\"badge\">Top Rated</span>\n    <img src=\"https://picsum.photos/500/350?random=7\">\n    <div class=\"product-name\">MEN'S DASHIO A2</div>\n    <div class=\"product-sub\">Mid Yellow/Green</div>\n    <div class=\"bottom\"><span class=\"color\"></span><span class=\"price\">$180</span></div>\n  </div>\n\n  <div class=\"nike-card\">\n    <span class=\"badge\">Top Rated</span>\n    <img src=\"https://picsum.photos/500/350?random=8\">\n    <div class=\"product-name\">MEN'S DASHIO A2</div>\n    <div class=\"product-sub\">Mid Yellow/Green</div>\n    <div class=\"bottom\"><span class=\"color\"></span><span class=\"price\">$150</span></div>\n  </div>\n\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_liquid_gna8kH": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -100,6 +110,7 @@
     "image_banner_LVjmxH",
     "banner",
     "product-grid",
+    "custom_liquid_yRgRdp",
     "custom_liquid_gna8kH"
   ]
 }
