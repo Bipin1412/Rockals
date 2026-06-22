@@ -127,6 +127,16 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_7irYkg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"rockals-category-grid\">\n\n  <a href=\"/collections/sneaker\" class=\"rockals-cat-card\">\n    <img src=\"https://i.pinimg.com/736x/40/80/a0/4080a04455f755f6f0528102c32be49b.jpg\" alt=\"X Lows\">\n    <div class=\"cat-overlay\"></div>\n    <h2>X LOWS</h2>\n    <span>SHOP NOW</span>\n  </a>\n\n  <a href=\"/collections/sneaker\" class=\"rockals-cat-card\">\n    <img src=\"https://i.pinimg.com/1200x/9c/6b/77/9c6b778c3bf0d73a156bf404c009c9ae.jpg\" alt=\"Aeres\">\n    <div class=\"cat-overlay\"></div>\n    <h2>AERES</h2>\n    <span>SHOP NOW</span>\n  </a>\n\n  <a href=\"/collections/sneaker\" class=\"rockals-cat-card\">\n    <img src=\"https://i.pinimg.com/1200x/28/8d/c3/288dc32270b37c9122125d71a6d08490.jpg\" alt=\"Apex\">\n    <div class=\"cat-overlay\"></div>\n    <h2>APEX</h2>\n    <span>SHOP NOW</span>\n  </a>\n\n  <a href=\"/collections/sneaker\" class=\"rockals-cat-card\">\n    <img src=\"https://i.pinimg.com/1200x/dc/fe/69/dcfe699dd74aa128d3b9072dad7837da.jpg\" alt=\"Aeon\">\n    <div class=\"cat-overlay\"></div>\n    <h2>AEON</h2>\n    <span>SHOP NOW</span>\n  </a>\n\n</section>\n\n<style>\n.rockals-category-grid{\n  width:100%;\n  display:grid;\n  grid-template-columns:repeat(2,1fr);\n  gap:0;\n  margin:0;\n  padding:0;\n}\n\n.rockals-cat-card{\n  position:relative;\n  height:520px;\n  overflow:hidden;\n  display:block;\n  text-decoration:none;\n  color:#fff;\n}\n\n.rockals-cat-card img{\n  width:100%;\n  height:100%;\n  object-fit:cover;\n  display:block;\n  transition:transform .6s ease;\n}\n\n.rockals-cat-card:hover img{\n  transform:scale(1.06);\n}\n\n.cat-overlay{\n  position:absolute;\n  inset:0;\n  background:linear-gradient(\n    to bottom,\n    rgba(0,0,0,.45),\n    rgba(0,0,0,.05),\n    rgba(0,0,0,.25)\n  );\n  z-index:1;\n}\n\n.rockals-cat-card h2{\n  position:absolute;\n  top:55px;\n  left:0;\n  right:0;\n  z-index:2;\n  text-align:center;\n  color:#fff;\n  font-size:68px;\n  font-weight:800;\n  letter-spacing:2px;\n  margin:0;\n  line-height:1;\n}\n\n.rockals-cat-card span{\n  position:absolute;\n  right:42px;\n  bottom:42px;\n  z-index:2;\n  color:#fff;\n  font-size:11px;\n  font-weight:800;\n  letter-spacing:.8px;\n  text-transform:uppercase;\n}\n\n@media(max-width:768px){\n  .rockals-category-grid{\n    grid-template-columns:1fr;\n  }\n\n  .rockals-cat-card{\n    height:420px;\n  }\n\n  .rockals-cat-card h2{\n    font-size:46px;\n    top:40px;\n  }\n\n  .rockals-cat-card span{\n    right:25px;\n    bottom:25px;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_blog_KRYgVt": {
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
@@ -151,6 +161,7 @@
     "collection_list_6RfGcU",
     "custom_liquid_HKGDwH",
     "featured_collection",
+    "custom_liquid_7irYkg",
     "featured_blog_KRYgVt"
   ]
 }
