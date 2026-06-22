@@ -89,6 +89,16 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_HKGDwH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"rockals-slider\">\n\n  <div class=\"slider-track\">\n\n    <!-- Banner 1: Offer -->\n    <div class=\"slide active\" style=\"background-image:url('https://i.pinimg.com/1200x/42/d6/2a/42d62ab3dc7af0549e241d945bfd35e0.jpg');\">\n      <div class=\"slide-content\">\n        <span>NEW LAUNCH OFFER</span>\n        <h2>Step Into Style</h2>\n        <p>Flat 10% OFF on your first ROCKALS order.</p>\n        <a href=\"/collections/all\">Shop Now</a>\n      </div>\n    </div>\n\n    <!-- Banner 2: Discount -->\n    <div class=\"slide\" style=\"background-image:url('https://i.pinimg.com/1200x/e9/ae/f9/e9aef9a64afc33347a418ba5d78bd073.jpg');\">\n      <div class=\"slide-content\">\n        <span>LIMITED TIME DEAL</span>\n        <h2>Flat ₹300 OFF</h2>\n        <p>On orders above ₹2499. Upgrade your sneaker game today.</p>\n        <a href=\"/collections/all\">Grab Offer</a>\n      </div>\n    </div>\n\n    <!-- Banner 3: Most Selling -->\n    <div class=\"slide\" style=\"background-image:url('https://i.pinimg.com/736x/64/43/5a/64435a5c8df2601f5cfbd518335e1c10.jpg');\">\n      <div class=\"slide-content\">\n        <span>BEST SELLERS</span>\n        <h2>Most Selling Sneakers</h2>\n        <p>Explore our customer-favourite ROCKALS collection.</p>\n        <a href=\"/collections/best-sellers\">View Collection</a>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"slider-dots\">\n    <span class=\"dot active\"></span>\n    <span class=\"dot\"></span>\n    <span class=\"dot\"></span>\n  </div>\n\n</section>\n\n<style>\n.rockals-slider{\n  position:relative;\n  width:100%;\n  height:520px;\n  overflow:hidden;\n}\n\n.slider-track{\n  width:100%;\n  height:100%;\n  position:relative;\n}\n\n.slide{\n  position:absolute;\n  inset:0;\n  opacity:0;\n  visibility:hidden;\n  background-size:cover;\n  background-position:center;\n  transition:opacity 1s ease;\n}\n\n.slide::before{\n  content:\"\";\n  position:absolute;\n  inset:0;\n  background:linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.25));\n}\n\n.slide.active{\n  opacity:1;\n  visibility:visible;\n}\n\n.slide-content{\n  position:relative;\n  z-index:2;\n  max-width:600px;\n  padding:120px 70px;\n  color:#fff;\n}\n\n.slide-content span{\n  font-size:13px;\n  letter-spacing:3px;\n  font-weight:700;\n}\n\n.slide-content h2{\n  font-size:60px;\n  line-height:1.1;\n  margin:18px 0;\n}\n\n.slide-content p{\n  font-size:18px;\n  line-height:1.7;\n  margin-bottom:30px;\n}\n\n.slide-content a{\n  display:inline-block;\n  background:#fff;\n  color:#111;\n  padding:14px 34px;\n  border-radius:40px;\n  text-decoration:none;\n  font-weight:700;\n}\n\n.slider-dots{\n  position:absolute;\n  bottom:25px;\n  left:70px;\n  z-index:5;\n  display:flex;\n  gap:10px;\n}\n\n.dot{\n  width:12px;\n  height:12px;\n  background:#fff;\n  opacity:.4;\n  border-radius:50%;\n}\n\n.dot.active{\n  opacity:1;\n}\n\n@media(max-width:768px){\n  .rockals-slider{\n    height:430px;\n  }\n\n  .slide-content{\n    padding:90px 25px;\n  }\n\n  .slide-content h2{\n    font-size:36px;\n  }\n\n  .slide-content p{\n    font-size:15px;\n  }\n\n  .slider-dots{\n    left:25px;\n  }\n}\n</style>\n\n<script>\nlet currentSlide = 0;\nconst slides = document.querySelectorAll('.rockals-slider .slide');\nconst dots = document.querySelectorAll('.rockals-slider .dot');\n\nfunction showSlide(index){\n  slides.forEach(slide => slide.classList.remove('active'));\n  dots.forEach(dot => dot.classList.remove('active'));\n\n  slides[index].classList.add('active');\n  dots[index].classList.add('active');\n}\n\nsetInterval(() => {\n  currentSlide = (currentSlide + 1) % slides.length;\n  showSlide(currentSlide);\n}, 3500);\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -117,103 +127,6 @@
         "padding_bottom": 36
       }
     },
-    "slideshow_rypCKh": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_nnAxym": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        },
-        "slide_JPnz8M": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_nnAxym",
-        "slide_JPnz8M"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "rich_text_tE9dwy": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_MbbEFU": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_CKVe6g": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_LBEgPN": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_MbbEFU",
-        "text_CKVe6g",
-        "button_LBEgPN"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "featured_blog_KRYgVt": {
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
@@ -236,9 +149,8 @@
   "order": [
     "image_banner",
     "collection_list_6RfGcU",
+    "custom_liquid_HKGDwH",
     "featured_collection",
-    "slideshow_rypCKh",
-    "rich_text_tE9dwy",
     "featured_blog_KRYgVt"
   ]
 }
