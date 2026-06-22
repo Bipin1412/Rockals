@@ -48,6 +48,16 @@
         "show_text_below": false
       }
     },
+    "custom_liquid_gFTHg4": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"rockals-categories\">\n\n<a href=\"/collections/sneakers\" class=\"cat-card\">\n<img src=\"YOUR_IMAGE_1\">\n<div class=\"overlay\"></div>\n<div class=\"content\">\n<h2>Sneakers</h2>\n<p>SHOP NOW →</p>\n</div>\n</a>\n\n<a href=\"/collections/premium-sneakers\" class=\"cat-card\">\n<img src=\"YOUR_IMAGE_2\">\n<div class=\"overlay\"></div>\n<div class=\"content\">\n<h2>Premium Sneakers</h2>\n<p>SHOP NOW →</p>\n</div>\n</a>\n\n<a href=\"/collections/casual-sneakers\" class=\"cat-card\">\n<img src=\"YOUR_IMAGE_3\">\n<div class=\"overlay\"></div>\n<div class=\"content\">\n<h2>Casual Sneakers</h2>\n<p>SHOP NOW →</p>\n</div>\n</a>\n\n<a href=\"/collections/new-arrivals\" class=\"cat-card\">\n<img src=\"YOUR_IMAGE_4\">\n<div class=\"overlay\"></div>\n<div class=\"content\">\n<h2>New Arrivals</h2>\n<p>SHOP NOW →</p>\n</div>\n</a>\n\n<a href=\"/collections/best-sellers\" class=\"cat-card\">\n<img src=\"YOUR_IMAGE_5\">\n<div class=\"overlay\"></div>\n<div class=\"content\">\n<h2>Best Sellers</h2>\n<p>SHOP NOW →</p>\n</div>\n</a>\n\n</section>\n\n<style>\n\n.rockals-categories{\ndisplay:grid;\ngrid-template-columns:repeat(5,1fr);\ngap:20px;\npadding:20px;\nmax-width:1800px;\nmargin:auto;\n}\n\n.cat-card{\nposition:relative;\nheight:650px;\noverflow:hidden;\ndisplay:block;\ntext-decoration:none;\nborder-radius:0;\n}\n\n.cat-card img{\nwidth:100%;\nheight:100%;\nobject-fit:cover;\ntransition:.6s;\n}\n\n.cat-card:hover img{\ntransform:scale(1.08);\n}\n\n.overlay{\nposition:absolute;\ninset:0;\nbackground:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.05));\n}\n\n.content{\nposition:absolute;\nbottom:30px;\nleft:30px;\nright:30px;\nz-index:2;\ncolor:#fff;\n}\n\n.content h2{\nfont-size:48px;\nfont-weight:500;\nline-height:1.1;\nmargin-bottom:15px;\nfont-family: \"Times New Roman\", serif;\n}\n\n.content p{\nfont-size:16px;\nfont-weight:600;\nletter-spacing:2px;\nmargin:0;\n}\n\n@media(max-width:1200px){\n.rockals-categories{\ngrid-template-columns:repeat(2,1fr);\n}\n}\n\n@media(max-width:768px){\n.rockals-categories{\ngrid-template-columns:1fr;\n}\n.cat-card{\nheight:500px;\n}\n.content h2{\nfont-size:36px;\n}\n}\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "collection_list_6RfGcU": {
       "type": "collection-list",
       "blocks": {
@@ -168,6 +178,7 @@
   },
   "order": [
     "image_banner",
+    "custom_liquid_gFTHg4",
     "collection_list_6RfGcU",
     "custom_liquid_HKGDwH",
     "featured_collection",

@@ -1,5 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "image_banner_LVjmxH": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_WpcDka": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_YH7ATz": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_AQLLNc": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_WpcDka",
+        "text_YH7ATz",
+        "buttons_AQLLNc"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -13,6 +70,7 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -23,14 +81,25 @@
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_liquid_gna8kH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"sneaker-showcase\">\n\n  <div class=\"products-grid\">\n    {% assign sneaker_collection = collections['sneaker'] %}\n    {% for product in sneaker_collection.products limit: 8 %}\n      <div class=\"product-card\">\n        <a href=\"{{ product.url }}\">\n          <img src=\"{{ product.featured_image | img_url: '500x500' }}\" alt=\"{{ product.title }}\">\n          <h4>{{ product.title }}</h4>\n          <p>₹{{ product.price | money_without_currency }}</p>\n        </a>\n      </div>\n    {% else %}\n      <p>No products found in this collection.</p>\n    {% endfor %}\n  </div>\n\n  <div class=\"gallery\">\n    <div class=\"gallery-left\">\n      <img src=\"https://i.pinimg.com/1200x/9c/6b/77/9c6b778c3bf0d73a156bf404c009c9ae.jpg\" alt=\"Aeres\">\n      <img src=\"https://i.pinimg.com/1200x/28/8d/c3/288dc32270b37c9122125d71a6d08490.jpg\" alt=\"Apex\">\n      <img src=\"https://i.pinimg.com/1200x/dc/fe/69/dcfe699dd74aa128d3b9072dad7837da.jpg\" alt=\"Aeon\">\n      <img src=\"https://i.pinimg.com/736x/40/80/a0/4080a04455f755f6f0528102c32be49b.jpg\" alt=\"X Lows\">\n    </div>\n    <div class=\"gallery-right\">\n      <img src=\"https://i.pinimg.com/1200x/9c/6b/77/9c6b778c3bf0d73a156bf404c009c9ae.jpg\" alt=\"Featured\">\n    </div>\n  </div>\n\n</section>\n\n<style>\n.sneaker-showcase {\n  max-width: 1400px;\n  margin: auto;\n  padding: 40px 20px;\n}\n\n.products-grid {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 20px;\n  margin-bottom: 30px;\n}\n\n.product-card {\n  border: 1px solid #eee;\n  border-radius: 12px;\n  overflow: hidden;\n  background: #fff;\n}\n\n.product-card a {\n  text-decoration: none;\n  color: inherit;\n  display: block;\n}\n\n.product-card img {\n  width: 100%;\n  display: block;\n}\n\n.product-card h4 {\n  padding: 10px 15px 0;\n}\n\n.product-card p {\n  padding: 0 15px 15px;\n  font-weight: bold;\n}\n\n.gallery {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 15px;\n}\n\n.gallery-left {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 15px;\n}\n\n.gallery img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  border-radius: 12px;\n}\n\n@media (max-width: 768px) {\n  .products-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n\n  .gallery {\n    grid-template-columns: 1fr;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
+    "image_banner_LVjmxH",
     "banner",
-    "product-grid"
+    "product-grid",
+    "custom_liquid_gna8kH"
   ]
 }
