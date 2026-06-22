@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "custom_liquid_KtK3Rn": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"contact-container\">\n\n  <h1>Contact Us</h1>\n  <p class=\"subtitle\">\n    We're here to help. Reach out to us through any of the channels below.\n  </p>\n\n  <div class=\"contact-grid\">\n\n    <div class=\"contact-card\">\n      <div class=\"icon\">📍</div>\n      <h3>Address</h3>\n      <p>\n        ROCKALS<br>\n        New Delhi, India\n      </p>\n    </div>\n\n    <div class=\"contact-card\">\n      <div class=\"icon\">📧</div>\n      <h3>Email Us</h3>\n      <p>care@rockals.com</p>\n    </div>\n\n    <div class=\"contact-card\">\n      <div class=\"icon\">📞</div>\n      <h3>Phone Number</h3>\n      <p>+91 98765 43210</p>\n    </div>\n\n    <div class=\"contact-card\">\n      <div class=\"icon\">🕒</div>\n      <h3>Working Hours</h3>\n      <p>\n        Monday - Saturday<br>\n        10:00 AM – 7:00 PM\n      </p>\n    </div>\n\n  </div>\n\n</div>\n\n<style>\n.contact-container{\n  max-width:1200px;\n  margin:60px auto;\n  padding:20px;\n  text-align:center;\n}\n\n.contact-container h1{\n  font-size:48px;\n  margin-bottom:10px;\n  color:#111;\n}\n\n.subtitle{\n  color:#666;\n  margin-bottom:50px;\n  font-size:16px;\n}\n\n.contact-grid{\n  display:grid;\n  grid-template-columns:repeat(4,1fr);\n  gap:25px;\n}\n\n.contact-card{\n  background:#fff;\n  border:1px solid #e5e5e5;\n  border-radius:15px;\n  padding:35px 25px;\n  box-shadow:0 5px 20px rgba(0,0,0,0.05);\n  transition:all .3s ease;\n}\n\n.contact-card:hover{\n  transform:translateY(-8px);\n  box-shadow:0 15px 30px rgba(0,0,0,0.12);\n}\n\n.icon{\n  font-size:35px;\n  margin-bottom:15px;\n}\n\n.contact-card h3{\n  margin-bottom:12px;\n  color:#111;\n}\n\n.contact-card p{\n  color:#666;\n  line-height:1.8;\n}\n\n@media(max-width:991px){\n  .contact-grid{\n    grid-template-columns:repeat(2,1fr);\n  }\n}\n\n@media(max-width:768px){\n  .contact-grid{\n    grid-template-columns:1fr;\n  }\n\n  .contact-container h1{\n    font-size:36px;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "contact_form_ARfbxV": {
       "type": "contact-form",
       "name": "t:sections.contact-form.presets.name",
@@ -70,6 +80,7 @@
     }
   },
   "order": [
+    "custom_liquid_KtK3Rn",
     "contact_form_ARfbxV",
     "rich_text_ttKeJF",
     "main"
