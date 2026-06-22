@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-rockals-info-page",
+      "disabled": true,
       "settings": {
         "eyebrow": "ROCKALS Size Guide",
         "intro": "Dummy content for the Size Guide page. This page can later hold measurement tips, fit notes, and conversion guidance.",
