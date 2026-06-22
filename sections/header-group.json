@@ -61,7 +61,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<img src=\"https://i.pinimg.com/originals/bc/38/2e/bc382ee64cd5d4030572692aa76cecf8.gif\" style=\"width:100%;display:block;\">",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
