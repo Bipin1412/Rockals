@@ -20,7 +20,7 @@
         "newsletter_heading": "Join our email list",
         "newsletter_subheading": "Get exclusive deals and early access to new products.",
         "quick_links_heading": "QUICK LINKS",
-        "quick_link_1_url": "/pages/product-details",
+        "quick_link_1_url": "shopify://collections",
         "quick_link_2_url": "/pages/faq",
         "quick_link_3_url": "/pages/size-guide",
         "quick_link_4_url": "/pages/contact-us",
