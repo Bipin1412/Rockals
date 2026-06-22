@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -10,11 +19,76 @@
         "card_2_title": "Sizing",
         "card_2_text": "How does sizing run? What should I do if I am between sizes?",
         "card_3_title": "Returns",
-        "card_3_text": "What is the return window? How do exchanges work?"
+        "card_3_text": "What is the return window? How do exchanges work?",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_ajwMdG": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_gjrCYM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I clean my Rockals Sneakers?",
+            "icon": "chat_bubble",
+            "row_content": "<p><strong>CAUTION:</strong> When attempting to clean your Rockals Sneakers, please test the cleaning process on a section of the sneaker which is not visible, such as the outer edges of the tongue. This is to ensure that the mild soap used does not affect the color or material.</p><p><strong>Canvas:</strong> Using a damp cloth, rub gently with lukewarm water and mild soap. DO NOT MACHINE WASH OR DRY.</p><p><strong>Leather/Synthetic:</strong> Using a damp cloth, rub gently with lukewarm water and mild soap. DO NOT MACHINE WASH OR DRY.</p><p><strong>Suede:</strong> Brush away dirt with a suede brush, when dry. DO NOT USE WATER. DO NOT MACHINE DRY.</p><p><strong>Drying:</strong> Dry at room temperature, stuff with paper to help maintain their shape. Change paper occasionally throughout drying process. To prolong the life, DO NOT APPLY DIRECT HEAT.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CKiBPF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ACU7wT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_HybUgW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_gjrCYM",
+        "collapsible_row_CKiBPF",
+        "collapsible_row_ACU7wT",
+        "collapsible_row_HybUgW"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collapsible_content_ajwMdG"
   ]
 }
