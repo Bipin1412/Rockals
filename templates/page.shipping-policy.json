@@ -11,9 +11,20 @@
   "sections": {
     "main": {
       "type": "main-shipping-policy",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "custom_liquid_mBreH9": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"shipping-policy-page\">\n  <h1>Shipping Policy</h1>\n\n  <p>\n    We aim to deliver your ROCKALS order safely and on time. Please read our shipping policy carefully before placing your order.\n  </p>\n\n  <div class=\"policy-box\">\n    <h2>Order Processing</h2>\n    <p>All orders are processed within 24–48 working hours after confirmation.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Shipping Time</h2>\n    <p>Standard delivery usually takes 5–7 working days depending on your location.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Shipping Charges</h2>\n    <p>Shipping charges, if applicable, will be shown at checkout before payment.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Order Tracking</h2>\n    <p>Once your order is shipped, tracking details will be shared via SMS, email, or WhatsApp.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Delivery Issues</h2>\n    <p>If your order is delayed, damaged, or marked delivered but not received, please contact our support team immediately.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Important Note</h2>\n    <p>Please ensure your address and phone number are correct while placing the order. We are not responsible for delivery failure due to incorrect details.</p>\n  </div>\n</div>\n\n<style>\n.shipping-policy-page{\n  max-width:950px;\n  margin:60px auto;\n  padding:20px;\n  color:#111;\n  font-family:inherit;\n}\n\n.shipping-policy-page h1{\n  text-align:center;\n  font-size:48px;\n  margin-bottom:25px;\n}\n\n.shipping-policy-page > p{\n  text-align:center;\n  color:#555;\n  font-size:17px;\n  line-height:1.8;\n  margin-bottom:45px;\n}\n\n.policy-box{\n  background:#fff;\n  border:1px solid #e5e5e5;\n  border-radius:14px;\n  padding:28px 30px;\n  margin-bottom:22px;\n  box-shadow:0 8px 25px rgba(0,0,0,0.04);\n}\n\n.policy-box h2{\n  font-size:24px;\n  margin-bottom:10px;\n  color:#111;\n}\n\n.policy-box p{\n  color:#555;\n  line-height:1.7;\n  margin:0;\n}\n\n@media(max-width:768px){\n  .shipping-policy-page h1{\n    font-size:36px;\n  }\n\n  .policy-box{\n    padding:22px;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_XwcPaw": {
@@ -62,6 +73,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_mBreH9",
     "rich_text_XwcPaw"
   ]
 }
