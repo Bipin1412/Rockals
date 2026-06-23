@@ -9,6 +9,29 @@
  */
 {
   "sections": {
+    "rich_text_n6iGPG": {
+      "type": "rich-text",
+      "blocks": {
+        "text_MVkpmx": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Shipping Policy</h1><h2>Processing & Delivery</h2><p>At ROCKALS, we ensure your order reaches you swiftly and securely. Here's what you need to know:</p><ul><li><strong>Order Processing:</strong> All orders are processed within 1–2 business days of confirmation.</li><li><strong>Delivery Timeline:</strong> Standard delivery takes 5 to 7 business days across India.</li><li><strong>Tracking:</strong> You'll receive tracking details via SMS, WhatsApp, or Email immediately after dispatch.</li></ul><h3>Shipping Options & Costs</h3><ul><li><strong>Free Shipping:</strong> Complimentary shipping on all prepaid orders across India.</li><li><strong>Cash on Delivery (COD):</strong> Available on eligible orders with a handling fee applied at checkout.</li></ul><h3>Important Conditions</h3><p>Please note the following to ensure smooth delivery:</p><ul><li><strong>Accurate Information:</strong> Provide complete and correct shipping details. ROCKALS is not responsible for delivery issues caused by incomplete or incorrect information.</li><li><strong>Delivery Delays:</strong> Timelines may vary due to courier delays, weather, or unforeseen circumstances. ROCKALS is not liable for delays caused by third-party logistics providers.</li><li><strong>Failed Delivery Attempts:</strong> If delivery fails due to customer unavailability, redelivery charges may apply and will be communicated to you in advance.</li></ul><h3>Order Modifications & Cancellations</h3><ul><li><strong>Modification Window:</strong> Orders can be cancelled or modified within 2 hours of placement by contacting our customer support team.</li><li><strong>Post-Dispatch:</strong> Once your order has been dispatched, it cannot be cancelled or modified.</li></ul><h3>Need Help?</h3><p>For any questions about your shipment or to make changes to your order, please reach out to our customer support team within 2 hours of placing your order. We're here to help ensure your ROCKALS experience is exceptional.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_MVkpmx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-shipping-policy",
       "disabled": true,
@@ -16,64 +39,10 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "custom_liquid_mBreH9": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"shipping-policy-page\">\n  <h1>Shipping Policy</h1>\n\n  <p>\n    We aim to deliver your ROCKALS order safely and on time. Please read our shipping policy carefully before placing your order.\n  </p>\n\n  <div class=\"policy-box\">\n    <h2>Order Processing</h2>\n    <p>All orders are processed within 24–48 working hours after confirmation.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Shipping Time</h2>\n    <p>Standard delivery usually takes 5–7 working days depending on your location.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Shipping Charges</h2>\n    <p>Shipping charges, if applicable, will be shown at checkout before payment.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Order Tracking</h2>\n    <p>Once your order is shipped, tracking details will be shared via SMS, email, or WhatsApp.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Delivery Issues</h2>\n    <p>If your order is delayed, damaged, or marked delivered but not received, please contact our support team immediately.</p>\n  </div>\n\n  <div class=\"policy-box\">\n    <h2>Important Note</h2>\n    <p>Please ensure your address and phone number are correct while placing the order. We are not responsible for delivery failure due to incorrect details.</p>\n  </div>\n</div>\n\n<style>\n.shipping-policy-page{\n  max-width:950px;\n  margin:60px auto;\n  padding:20px;\n  color:#111;\n  font-family:inherit;\n}\n\n.shipping-policy-page h1{\n  text-align:center;\n  font-size:48px;\n  margin-bottom:25px;\n}\n\n.shipping-policy-page > p{\n  text-align:center;\n  color:#555;\n  font-size:17px;\n  line-height:1.8;\n  margin-bottom:45px;\n}\n\n.policy-box{\n  background:#fff;\n  border:1px solid #e5e5e5;\n  border-radius:14px;\n  padding:28px 30px;\n  margin-bottom:22px;\n  box-shadow:0 8px 25px rgba(0,0,0,0.04);\n}\n\n.policy-box h2{\n  font-size:24px;\n  margin-bottom:10px;\n  color:#111;\n}\n\n.policy-box p{\n  color:#555;\n  line-height:1.7;\n  margin:0;\n}\n\n@media(max-width:768px){\n  .shipping-policy-page h1{\n    font-size:36px;\n  }\n\n  .policy-box{\n    padding:22px;\n  }\n}\n</style>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_XwcPaw": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Mg7mW6": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_zh8y7f": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_pVjYjC": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Mg7mW6",
-        "text_zh8y7f",
-        "button_pVjYjC"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "main",
-    "custom_liquid_mBreH9",
-    "rich_text_XwcPaw"
+    "rich_text_n6iGPG",
+    "main"
   ]
 }
