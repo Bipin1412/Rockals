@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "rich_text_raAnzM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FzwVAG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Terms & Conditions",
+            "heading_size": "h1"
+          }
+        },
+        "text_MK9TQE": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/><br/>1. Company Identity<br/>   Add the legal entity name operating ROCKALS along with the registered business address.<br/><br/>2. Order Acceptance & Right to Refuse<br/>   ROCKALS reserves the right to refuse or cancel any order due to pricing errors, stock unavailability, suspected fraud, or other valid reasons. In such cases, a full refund will be issued.<br/><br/>3. GST Clarification<br/>   Mention whether product prices displayed on the website are inclusive of applicable taxes/GST.<br/><br/>4. Force Majeure<br/>   ROCKALS shall not be liable for delays or failures caused by events beyond reasonable control, including natural disasters, pandemics, government actions, or similar events.<br/><br/>5. Privacy Policy Reference<br/>   Add a statement that use of the website is also governed by the Privacy Policy.<br/><br/>6. Limitation of Liability<br/>   ROCKALS' total liability for any claim shall not exceed the order value paid by the customer.<br/><br/>7. Governing Law & Jurisdiction<br/>   These Terms shall be governed by the laws of India and subject to the jurisdiction of the courts of Pune, Maharashtra.<br/><br/>8. Severability<br/>   If any provision of these Terms is found invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FzwVAG",
+        "text_MK9TQE"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-rockals-info-page",
       "disabled": true,
@@ -24,20 +55,10 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "custom_liquid_PxKwwF": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"rockals-terms\">\n\n    <div class=\"hero-section\">\n        <span>ROCKALS LEGAL</span>\n        <h1>Terms & Conditions</h1>\n        <p>\n            By using our website and purchasing products from ROCKALS,\n            you agree to the following terms and conditions.\n        </p>\n    </div>\n\n    <div class=\"timeline\">\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">01</div>\n            <div class=\"timeline-content\">\n                <h3>Acceptance of Terms</h3>\n                <p>By accessing our website, you agree to comply with these terms and all applicable laws and regulations.</p>\n            </div>\n        </div>\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">02</div>\n            <div class=\"timeline-content\">\n                <h3>Products & Availability</h3>\n                <p>All products are subject to availability. We reserve the right to modify or discontinue products without prior notice.</p>\n            </div>\n        </div>\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">03</div>\n            <div class=\"timeline-content\">\n                <h3>Pricing & Payments</h3>\n                <p>All pricing displayed on our website is subject to change without notice. Payments must be completed before order processing.</p>\n            </div>\n        </div>\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">04</div>\n            <div class=\"timeline-content\">\n                <h3>Shipping & Delivery</h3>\n                <p>Delivery timelines are estimated and may vary due to courier, location, or unforeseen circumstances.</p>\n            </div>\n        </div>\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">05</div>\n            <div class=\"timeline-content\">\n                <h3>Returns & Refunds</h3>\n                <p>Returns and exchanges are governed by our Returns Policy. Please review it before placing an order.</p>\n            </div>\n        </div>\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">06</div>\n            <div class=\"timeline-content\">\n                <h3>Intellectual Property</h3>\n                <p>All logos, images, designs, and website content remain the property of ROCKALS.</p>\n            </div>\n        </div>\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">07</div>\n            <div class=\"timeline-content\">\n                <h3>User Responsibilities</h3>\n                <p>Users must not misuse the platform, upload harmful content, or attempt unauthorized access.</p>\n            </div>\n        </div>\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">08</div>\n            <div class=\"timeline-content\">\n                <h3>Limitation of Liability</h3>\n                <p>ROCKALS shall not be liable for indirect, incidental, or consequential damages arising from website usage.</p>\n            </div>\n        </div>\n\n        <div class=\"timeline-item\">\n            <div class=\"timeline-number\">09</div>\n            <div class=\"timeline-content\">\n                <h3>Policy Updates</h3>\n                <p>We reserve the right to modify these terms at any time. Continued use signifies acceptance.</p>\n            </div>\n        </div>\n\n    </div>\n\n   \n\n</div>\n\n<style>\n\n.rockals-terms{\n    max-width:1200px;\n    margin:auto;\n    padding:40px 20px 80px;\n}\n\n.hero-section{\n    text-align:center;\n    margin-bottom:80px;\n}\n\n.hero-section span{\n    letter-spacing:4px;\n    color:#888;\n    font-size:12px;\n}\n\n.hero-section h1{\n    font-size:70px;\n    margin:20px 0;\n    font-weight:700;\n}\n\n.hero-section p{\n    max-width:700px;\n    margin:auto;\n    color:#666;\n    line-height:1.8;\n}\n\n.timeline{\n    position:relative;\n    max-width:900px;\n    margin:auto;\n}\n\n.timeline::before{\n    content:\"\";\n    position:absolute;\n    left:30px;\n    top:0;\n    width:2px;\n    height:100%;\n    background:#ddd;\n}\n\n.timeline-item{\n    display:flex;\n    gap:30px;\n    margin-bottom:35px;\n}\n\n.timeline-number{\n    min-width:60px;\n    height:60px;\n    border-radius:50%;\n    background:#111827;\n    color:white;\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    font-weight:700;\n    z-index:2;\n}\n\n.timeline-content{\n    flex:1;\n    background:white;\n    border:1px solid #eee;\n    border-radius:18px;\n    padding:30px;\n    box-shadow:0 15px 40px rgba(0,0,0,.05);\n    transition:.3s;\n}\n\n.timeline-content:hover{\n    transform:translateY(-5px);\n}\n\n.timeline-content h3{\n    margin-bottom:10px;\n    font-size:22px;\n}\n\n.timeline-content p{\n    color:#666;\n    line-height:1.8;\n}\n\n.contact-box{\n    margin-top:80px;\n    background:#111827;\n    color:white;\n    border-radius:25px;\n    padding:50px;\n    text-align:center;\n}\n\n.contact-box h2{\n    font-size:40px;\n    margin-bottom:15px;\n}\n\n.contact-box p{\n    opacity:.8;\n}\n\n.contact-details{\n    display:flex;\n    justify-content:center;\n    gap:80px;\n    margin-top:30px;\n}\n\n.contact-details div{\n    display:flex;\n    flex-direction:column;\n    gap:8px;\n}\n\n.contact-details span{\n    color:#fff;\n}\n\n@media(max-width:768px){\n\n.hero-section h1{\n    font-size:42px;\n}\n\n.timeline-item{\n    flex-direction:column;\n}\n\n.timeline::before{\n    display:none;\n}\n\n.contact-details{\n    flex-direction:column;\n    gap:25px;\n}\n\n.contact-box{\n    padding:35px 20px;\n}\n\n}\n\n</style>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "main",
-    "custom_liquid_PxKwwF"
+    "rich_text_raAnzM",
+    "main"
   ]
 }
