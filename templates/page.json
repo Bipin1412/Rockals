@@ -80,6 +80,7 @@
     },
     "video_NiPcWH": {
       "type": "video",
+      "disabled": true,
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "",
@@ -143,8 +144,8 @@
           "type": "row",
           "settings": {
             "caption": "Our Story",
-            "heading": "Rockals",
-            "text": "<p>ROCKALS is an Indian premium sneaker brand focused on delivering stylish, comfortable, and high-quality sneakers at affordable prices. Our mission is to make premium footwear accessible to everyone.<br/></p>",
+            "heading": "Built for Upgrade.",
+            "text": "<p>ROCKALS was born from a simple frustration: premium sneakers in India either cost a fortune or compromise on quality. We didn't think that trade-off should exist.</p>",
             "button_label": "Button label",
             "button_link": ""
           }
@@ -152,9 +153,9 @@
         "row_jLEnFx": {
           "type": "row",
           "settings": {
-            "caption": "Founder Note",
-            "heading": "Rockals",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "caption": "The Standard",
+            "heading": "Premium, without the premium price.",
+            "text": "<p>So we set out to build sneakers that carry the look, feel, and finish of a premium pair — at a price that doesn't feel premium. Every ROCKALS sneaker is designed around one idea: an upgrade shouldn't be out of reach.</p><p>From the wavy panel lines of AAKAR to the bold diamond silhouette of TAKSH, each design is built with genuine materials, considered detailing, and a fit made for everyday movement — for the man who wants to look sharp without overpaying for a logo.</p>",
             "button_label": "Button label",
             "button_link": ""
           }
@@ -162,9 +163,9 @@
         "row_eGwfMY": {
           "type": "row",
           "settings": {
-            "caption": "Why",
-            "heading": "Rockals",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "caption": "Our Promise",
+            "heading": "This is ROCKALS.",
+            "text": "<p>We're not just selling sneakers. We're building a standard — one where style, comfort, and affordability aren't opposing forces, but the same pair on your feet.</p><p>This is Built for Upgrade. This is ROCKALS.</p>",
             "button_label": "Button label",
             "button_link": ""
           }
@@ -198,8 +199,8 @@
         "column_FKnzwR": {
           "type": "column",
           "settings": {
-            "title": "Mission",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Premium look, accessible price",
+            "text": "<p>No compromise on either.</p>",
             "link_label": "",
             "link": ""
           }
@@ -207,8 +208,8 @@
         "column_FBqbjq": {
           "type": "column",
           "settings": {
-            "title": "Vision",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Genuine materials",
+            "text": "<p>Considered construction, not just branding.</p>",
             "link_label": "",
             "link": ""
           }
@@ -216,8 +217,17 @@
         "column_c8C9wh": {
           "type": "column",
           "settings": {
-            "title": "Values",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Made for everyday movement",
+            "text": "<p>Comfort that lasts beyond one wear.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cjc9a9": {
+          "type": "column",
+          "settings": {
+            "title": "The Founding 100",
+            "text": "<p>Every customer is part of the ROCKALS story, not just a buyer.</p>",
             "link_label": "",
             "link": ""
           }
@@ -226,11 +236,12 @@
       "block_order": [
         "column_FKnzwR",
         "column_FBqbjq",
-        "column_c8C9wh"
+        "column_c8C9wh",
+        "column_cjc9a9"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "What We Stand For",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
