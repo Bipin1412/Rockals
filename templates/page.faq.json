@@ -31,36 +31,54 @@
         "collapsible_row_gjrCYM": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How do I clean my Rockals Sneakers?",
+            "heading": "Is Cash on Delivery (COD) available?",
             "icon": "chat_bubble",
-            "row_content": "<p><strong>CAUTION:</strong> When attempting to clean your Rockals Sneakers, please test the cleaning process on a section of the sneaker which is not visible, such as the outer edges of the tongue. This is to ensure that the mild soap used does not affect the color or material.</p><p><strong>Canvas:</strong> Using a damp cloth, rub gently with lukewarm water and mild soap. DO NOT MACHINE WASH OR DRY.</p><p><strong>Leather/Synthetic:</strong> Using a damp cloth, rub gently with lukewarm water and mild soap. DO NOT MACHINE WASH OR DRY.</p><p><strong>Suede:</strong> Brush away dirt with a suede brush, when dry. DO NOT USE WATER. DO NOT MACHINE DRY.</p><p><strong>Drying:</strong> Dry at room temperature, stuff with paper to help maintain their shape. Change paper occasionally throughout drying process. To prolong the life, DO NOT APPLY DIRECT HEAT.</p>",
+            "row_content": "<p>Yes, on eligible orders. A handling fee applies and will be shown at checkout before you place the order. Prepaid orders get free shipping.</p>",
             "page": ""
           }
         },
         "collapsible_row_CKiBPF": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How long does delivery take?",
             "icon": "chat_bubble",
-            "row_content": "",
+            "row_content": "<p>Orders are processed within 1–2 business days and delivered in 5–7 days.</p>",
             "page": ""
           }
         },
         "collapsible_row_ACU7wT": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "What is your return/exchange policy?",
             "icon": "chat_bubble",
-            "row_content": "",
+            "row_content": "<p>Orders can be cancelled only before dispatch. Damaged, defective, or incorrect items must be reported within 48 hours of delivery. The first size exchange is free; a second exchange on the same order is at the customer's cost.</p>",
             "page": ""
           }
         },
         "collapsible_row_HybUgW": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How do I know my size?",
             "icon": "chat_bubble",
-            "row_content": "",
+            "row_content": "<p>Check our Size Guide. ROCKALS sneakers are true to size, with no special sizing caveat.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pcjdWT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I contact support?",
+            "icon": "chat_bubble",
+            "row_content": "<p>You can contact ROCKALS at support@rockals.in or +91 70577 72131.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9DVFyb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you ship pan-India?",
+            "icon": "truck",
+            "row_content": "<p>Yes, ROCKALS ships across India.</p>",
             "page": ""
           }
         }
@@ -69,7 +87,9 @@
         "collapsible_row_gjrCYM",
         "collapsible_row_CKiBPF",
         "collapsible_row_ACU7wT",
-        "collapsible_row_HybUgW"
+        "collapsible_row_HybUgW",
+        "collapsible_row_pcjdWT",
+        "collapsible_row_9DVFyb"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
