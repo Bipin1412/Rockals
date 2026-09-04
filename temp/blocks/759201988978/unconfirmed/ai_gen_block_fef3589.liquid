@@ -1,6 +1,200 @@
+{% doc %}
+  @prompt
+    Create a premium sneaker/product showcase with:
+    
+    4 products visible in one row on desktop.
+    Large product image area at the top.
+    Very light grey image background: #F5F5F5.
+    Product image centered inside the container.
+    Product image should use object-fit: contain.
+    No rounded cards.
+    No heavy shadows.
+    Very small spacing between products.
+    Clean, minimal, premium sneaker-store appearance.
+    
+    Under every product image show:
+    
+    Vendor/brand name in small uppercase grey text.
+    Product title in black semi-bold text.
+    Product price in bold black text.
+    Compare-at price with strikethrough when applicable
+    it should be customizable 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-sneaker-showcase-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__heading {
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.text_color }};
+    font-family: {{ settings.type_header_font.family }};
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: {{ block.settings.product_gap }}px;
+    width: 100%;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__product {
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    overflow: hidden;
+    background: {{ block.settings.image_background }};
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #6b6b6b;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__placeholder svg {
+    width: 62%;
+    height: 62%;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__details {
+    padding-top: {{ block.settings.details_spacing }}px;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__vendor {
+    margin: 0 0 4px;
+    color: {{ block.settings.vendor_color }};
+    font-family: {{ settings.type_body_font.family }};
+    font-size: {{ block.settings.vendor_size }}px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__title {
+    margin: 0 0 6px;
+    color: {{ block.settings.text_color }};
+    font-family: {{ settings.type_body_font.family }};
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__prices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 7px;
+    font-family: {{ settings.type_body_font.family }};
+    font-size: {{ block.settings.price_size }}px;
+    line-height: 1.35;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__price {
+    color: {{ block.settings.text_color }};
+    font-weight: 700;
+  }
+
+  .ai-sneaker-showcase-{{ ai_gen_id }}__compare {
+    color: {{ block.settings.compare_color }};
+    font-size: 0.9em;
+    text-decoration: line-through;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-sneaker-showcase-{{ ai_gen_id }}__grid {
+      grid-template-columns: repeat({{ block.settings.mobile_columns }}, minmax(0, 1fr));
+    }
+
+    .ai-sneaker-showcase-{{ ai_gen_id }}__image-wrap {
+      height: {{ block.settings.mobile_image_height }}px;
+    }
+  }
+{% endstyle %}
+
+<sneaker-showcase-{{ ai_gen_id }} class="ai-sneaker-showcase-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.heading != blank %}
+    <h2 class="ai-sneaker-showcase-{{ ai_gen_id }}__heading">{{ block.settings.heading | escape }}</h2>
+  {% endif %}
+
+  <div class="ai-sneaker-showcase-{{ ai_gen_id }}__grid">
+    {% for product in block.settings.products %}
+      <a class="ai-sneaker-showcase-{{ ai_gen_id }}__product" href="{{ product.url }}">
+        <div class="ai-sneaker-showcase-{{ ai_gen_id }}__image-wrap">
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy" width="900" height="900">
+          {% else %}
+            <div class="ai-sneaker-showcase-{{ ai_gen_id }}__placeholder">{{ 'product-apparel-1' | placeholder_svg_tag }}</div>
+          {% endif %}
+        </div>
+        <div class="ai-sneaker-showcase-{{ ai_gen_id }}__details">
+          {% if block.settings.show_vendor and product.vendor != blank %}<p class="ai-sneaker-showcase-{{ ai_gen_id }}__vendor">{{ product.vendor | escape }}</p>{% endif %}
+          <h3 class="ai-sneaker-showcase-{{ ai_gen_id }}__title">{{ product.title | escape }}</h3>
+          <div class="ai-sneaker-showcase-{{ ai_gen_id }}__prices">
+            <span class="ai-sneaker-showcase-{{ ai_gen_id }}__price">{{ product.price | money }}</span>
+            {% if block.settings.show_compare_price and product.compare_at_price > product.price %}<span class="ai-sneaker-showcase-{{ ai_gen_id }}__compare">{{ product.compare_at_price | money }}</span>{% endif %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</sneaker-showcase-{{ ai_gen_id }}>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Sneaker showcase",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Featured sneakers" },
+    { "type": "product_list", "id": "products", "label": "Products", "limit": 4 },
+    { "type": "checkbox", "id": "show_vendor", "label": "Show vendor", "default": true },
+    { "type": "checkbox", "id": "show_compare_price", "label": "Show compare-at price", "default": true },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "select", "id": "mobile_columns", "label": "Columns on mobile", "options": [{ "value": "1", "label": "1" }, { "value": "2", "label": "2" }], "default": "2" },
+    { "type": "select", "id": "text_alignment", "label": "Text alignment", "options": [{ "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }], "default": "left" },
+    { "type": "range", "id": "image_height", "label": "Image height", "min": 180, "max": 600, "step": 10, "unit": "px", "default": 360 },
+    { "type": "range", "id": "mobile_image_height", "label": "Mobile image height", "min": 140, "max": 400, "step": 10, "unit": "px", "default": 220 },
+    { "type": "range", "id": "product_gap", "label": "Product spacing", "min": 0, "max": 32, "step": 2, "unit": "px", "default": 6 },
+    { "type": "range", "id": "heading_spacing", "label": "Heading spacing", "min": 4, "max": 48, "step": 4, "unit": "px", "default": 20 },
+    { "type": "range", "id": "details_spacing", "label": "Details spacing", "min": 4, "max": 24, "step": 2, "unit": "px", "default": 10 },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 16, "max": 48, "step": 2, "unit": "px", "default": 28 },
+    { "type": "range", "id": "vendor_size", "label": "Vendor size", "min": 8, "max": 16, "step": 1, "unit": "px", "default": 10 },
+    { "type": "range", "id": "title_size", "label": "Title size", "min": 12, "max": 24, "step": 1, "unit": "px", "default": 15 },
+    { "type": "range", "id": "price_size", "label": "Price size", "min": 12, "max": 24, "step": 1, "unit": "px", "default": 15 },
+    { "type": "color", "id": "image_background", "label": "Image background", "default": "#F5F5F5" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#121212" },
+    { "type": "color", "id": "vendor_color", "label": "Vendor text", "default": "#666666" },
+    { "type": "color", "id": "compare_color", "label": "Compare-at text", "default": "#666666" }
+  ],
+  "presets": [{ "name": "Sneaker showcase" }],
+  "tag": null,
+  "class": "sneaker-showcase-block"
+}
 {% endschema %}
