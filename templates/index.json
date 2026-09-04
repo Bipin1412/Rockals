@@ -48,6 +48,46 @@
         "show_text_below": false
       }
     },
+    "1788503024de5f8046": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_fef3589_KKHGTf": {
+          "type": "ai_gen_block_fef3589",
+          "settings": {
+            "heading": "Featured sneakers",
+            "products": [
+              "aakar-black-chrome",
+              "aakar-navy-ember",
+              "taksh-powder-black",
+              "taksh-saffron"
+            ],
+            "show_vendor": true,
+            "show_compare_price": true,
+            "desktop_width_percent": 100,
+            "mobile_columns": "2",
+            "text_alignment": "center",
+            "image_height": 360,
+            "mobile_image_height": 220,
+            "product_gap": 6,
+            "heading_spacing": 20,
+            "details_spacing": 10,
+            "heading_size": 28,
+            "vendor_size": 10,
+            "title_size": 15,
+            "price_size": 15,
+            "image_background": "#F5F5F5",
+            "text_color": "#F3F1F1",
+            "vendor_color": "#666666",
+            "compare_color": "#666666"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_fef3589_KKHGTf"
+      ],
+      "settings": {}
+    },
     "custom_liquid_gFTHg4": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -194,6 +234,7 @@
   },
   "order": [
     "image_banner",
+    "1788503024de5f8046",
     "custom_liquid_gFTHg4",
     "collection_list_6RfGcU",
     "custom_liquid_HKGDwH",
