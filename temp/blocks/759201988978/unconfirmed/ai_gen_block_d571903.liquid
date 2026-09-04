@@ -1,6 +1,340 @@
+{% doc %}
+  @prompt
+    i will give directly code generate that and make sure it is customizable and i can choose different images from my product 
+    
+    <section class="rockals-category-grid">
+    
+      <a href="/products/product-1" class="rockals-cat-card">
+        <img src="https://i.pinimg.com/736x/40/80/a0/4080a04455f755f6f0528102c32be49b.jpg" alt="X Lows">
+        <div class="cat-overlay"></div>
+        <h2>X LOWS</h2>
+        <div class="shop-btn">SHOP NOW →</div>
+      </a>
+    
+      <a href="/products/product-2" class="rockals-cat-card">
+        <img src="https://i.pinimg.com/1200x/9c/6b/77/9c6b778c3bf0d73a156bf404c009c9ae.jpg" alt="Aeres">
+        <div class="cat-overlay"></div>
+        <h2>AERES</h2>
+        <div class="shop-btn">SHOP NOW →</div>
+      </a>
+    
+      <a href="/products/product-3" class="rockals-cat-card">
+        <img src="https://i.pinimg.com/1200x/28/8d/c3/288dc32270b37c9122125d71a6d08490.jpg" alt="Apex">
+        <div class="cat-overlay"></div>
+        <h2>APEX</h2>
+        <div class="shop-btn">SHOP NOW →</div>
+      </a>
+    
+      <a href="/products/product-4" class="rockals-cat-card">
+        <img src="https://i.pinimg.com/1200x/dc/fe/69/dcfe699dd74aa128d3b9072dad7837da.jpg" alt="Aeon">
+        <div class="cat-overlay"></div>
+        <h2>AEON</h2>
+        <div class="shop-btn">SHOP NOW →</div>
+      </a>
+    
+    </section>
+    
+    <style>
+    
+    .rockals-category-grid{
+      width:100%;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:0;
+      margin:0;
+      padding:0;
+    }
+    
+    .rockals-cat-card{
+      position:relative;
+      height:520px;
+      overflow:hidden;
+      display:block;
+      text-decoration:none;
+      color:#fff;
+    }
+    
+    .rockals-cat-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition:transform .6s ease;
+    }
+    
+    .rockals-cat-card:hover img{
+      transform:scale(1.08);
+    }
+    
+    .cat-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.35)
+      );
+      z-index:1;
+    }
+    
+    .rockals-cat-card h2{
+      position:absolute;
+      top:55px;
+      left:0;
+      right:0;
+      z-index:2;
+      text-align:center;
+      color:#fff;
+      font-size:68px;
+      font-weight:800;
+      letter-spacing:2px;
+      margin:0;
+      line-height:1;
+    }
+    
+    .shop-btn{
+      position:absolute;
+      bottom:40px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:3;
+    
+      background:#fff;
+      color:#111;
+    
+      padding:14px 30px;
+      border-radius:50px;
+    
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:1px;
+    
+      transition:.3s ease;
+    }
+    
+    .rockals-cat-card:hover .shop-btn{
+      background:#111;
+      color:#fff;
+    }
+    
+    @media(max-width:768px){
+    
+      .rockals-category-grid{
+        grid-template-columns:1fr;
+      }
+    
+      .rockals-cat-card{
+        height:420px;
+      }
+    
+      .rockals-cat-card h2{
+        font-size:42px;
+        top:40px;
+      }
+    
+      .shop-btn{
+        padding:12px 25px;
+        font-size:12px;
+      }
+    
+    }
+    
+    </style>
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .rockals-category-grid-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    background: {{ block.settings.background_color }};
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card {
+    position: relative;
+    min-width: 0;
+    height: {{ block.settings.card_height }}px;
+    overflow: hidden;
+    display: block;
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    isolation: isolate;
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__image,
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__image {
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1c1a1b;
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__placeholder svg {
+    width: 45%;
+    height: 45%;
+    color: #aaa4a0;
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.08) 45%, rgba(0, 0, 0, 0.6));
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__title {
+    position: absolute;
+    top: {{ block.settings.title_top }}px;
+    left: 16px;
+    right: 16px;
+    z-index: 2;
+    margin: 0;
+    color: {{ block.settings.text_color }};
+    font-family: {{ block.settings.heading_font.family }};
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 800;
+    letter-spacing: {{ block.settings.title_spacing }}px;
+    line-height: 1;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__button {
+    position: absolute;
+    bottom: {{ block.settings.button_bottom }}px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 132px;
+    padding: 14px 24px;
+    border-radius: {{ block.settings.button_radius }}px;
+    background: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    font-family: {{ block.settings.body_font.family }};
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card:hover .rockals-cat-card__image,
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card:focus-visible .rockals-cat-card__image {
+    transform: scale(1.08);
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card:hover .rockals-cat-card__button,
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card:focus-visible .rockals-cat-card__button {
+    background: {{ block.settings.button_hover_color }};
+    color: {{ block.settings.button_hover_text_color }};
+  }
+
+  .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card:focus-visible {
+    outline: 3px solid {{ block.settings.focus_color }};
+    outline-offset: -3px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .rockals-category-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card {
+      height: {{ block.settings.mobile_card_height }}px;
+    }
+
+    .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__title {
+      top: {{ block.settings.mobile_title_top }}px;
+      font-size: {{ block.settings.mobile_title_size }}px;
+    }
+
+    .rockals-category-grid-{{ ai_gen_id }} .rockals-cat-card__button {
+      bottom: 28px;
+    }
+  }
+{% endstyle %}
+
+<rockals-category-grid-{{ ai_gen_id }} class="rockals-category-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% for i in (1..4) %}
+    {% liquid
+      assign product_key = 'product_' | append: i
+      assign label_key = 'label_' | append: i
+      assign selected_product = block.settings[product_key]
+      assign card_label = block.settings[label_key]
+    %}
+    <a class="rockals-cat-card" href="{% if selected_product != blank %}{{ selected_product.url }}{% else %}#{% endif %}" aria-label="Shop {{ card_label | escape }}">
+      {% if selected_product != blank and selected_product.featured_image != blank %}
+        <img class="rockals-cat-card__image" src="{{ selected_product.featured_image | image_url: width: 1600 }}" alt="{{ selected_product.featured_image.alt | default: selected_product.title | escape }}" loading="lazy" width="{{ selected_product.featured_image.width }}" height="{{ selected_product.featured_image.height }}">
+      {% else %}
+        <div class="rockals-cat-card__placeholder">{{ 'image' | placeholder_svg_tag }}</div>
+      {% endif %}
+      <div class="rockals-cat-card__overlay"></div>
+      <h2 class="rockals-cat-card__title">{{ card_label | escape }}</h2>
+      <span class="rockals-cat-card__button">{{ block.settings.button_label | escape }} →</span>
+    </a>
+  {% endfor %}
+</rockals-category-grid-{{ ai_gen_id }}>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Rockals category grid",
+  "settings": [
+    { "type": "header", "content": "Products" },
+    { "type": "product", "id": "product_1", "label": "Product 1" },
+    { "type": "text", "id": "label_1", "label": "Label 1", "default": "X LOWS" },
+    { "type": "product", "id": "product_2", "label": "Product 2" },
+    { "type": "text", "id": "label_2", "label": "Label 2", "default": "AERES" },
+    { "type": "product", "id": "product_3", "label": "Product 3" },
+    { "type": "text", "id": "label_3", "label": "Label 3", "default": "APEX" },
+    { "type": "product", "id": "product_4", "label": "Product 4" },
+    { "type": "text", "id": "label_4", "label": "Label 4", "default": "AEON" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "desktop_width_percent", "label": "Desktop width", "min": 50, "max": 100, "step": 5, "unit": "%", "default": 100 },
+    { "type": "range", "id": "card_height", "label": "Card height", "min": 300, "max": 700, "step": 10, "unit": "px", "default": 520 },
+    { "type": "range", "id": "mobile_card_height", "label": "Mobile height", "min": 280, "max": 600, "step": 10, "unit": "px", "default": 420 },
+    { "type": "range", "id": "title_size", "label": "Title size", "min": 30, "max": 100, "step": 5, "unit": "px", "default": 70 },
+    { "type": "range", "id": "mobile_title_size", "label": "Mobile title size", "min": 24, "max": 70, "step": 2, "unit": "px", "default": 42 },
+    { "type": "range", "id": "title_top", "label": "Title position", "min": 20, "max": 100, "step": 5, "unit": "px", "default": 55 },
+    { "type": "range", "id": "mobile_title_top", "label": "Mobile title position", "min": 20, "max": 80, "step": 5, "unit": "px", "default": 40 },
+    { "type": "range", "id": "title_spacing", "label": "Letter spacing", "min": 0, "max": 6, "step": 1, "unit": "px", "default": 2 },
+    { "type": "range", "id": "button_bottom", "label": "Button position", "min": 20, "max": 80, "step": 5, "unit": "px", "default": 40 },
+    { "type": "header", "content": "Style" },
+    { "type": "font_picker", "id": "heading_font", "label": "Heading font", "default": "archivo_black_n4" },
+    { "type": "font_picker", "id": "body_font", "label": "Body font", "default": "geist_n4" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "SHOP NOW" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#030206" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#FFFFFF" },
+    { "type": "color", "id": "button_color", "label": "Button", "default": "#FFFFFF" },
+    { "type": "color", "id": "button_text_color", "label": "Button text", "default": "#030206" },
+    { "type": "color", "id": "button_hover_color", "label": "Hover button", "default": "#68021F" },
+    { "type": "color", "id": "button_hover_text_color", "label": "Hover text", "default": "#FFFFFF" },
+    { "type": "color", "id": "focus_color", "label": "Focus outline", "default": "#F7F3E6" },
+    { "type": "range", "id": "button_radius", "label": "Button radius", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 40 }
+  ],
+  "presets": [{ "name": "Rockals category grid" }],
+  "tag": null,
+  "class": "rockals-category-grid-block"
+}
 {% endschema %}
