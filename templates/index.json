@@ -182,6 +182,49 @@
         "padding_bottom": 52
       }
     },
+    "1788504645c1a1ce32": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_d571903_BLjfPc": {
+          "type": "ai_gen_block_d571903",
+          "settings": {
+            "product_1": "aakar-black-chrome",
+            "label_1": "X LOWS",
+            "product_2": "aakar-navy-ember",
+            "label_2": "AERES",
+            "product_3": "taksh-saffron",
+            "label_3": "APEX",
+            "product_4": "taksh-powder-black",
+            "label_4": "AEON",
+            "desktop_width_percent": 100,
+            "card_height": 520,
+            "mobile_card_height": 420,
+            "title_size": 70,
+            "mobile_title_size": 42,
+            "title_top": 55,
+            "mobile_title_top": 40,
+            "title_spacing": 2,
+            "button_bottom": 40,
+            "heading_font": "archivo_black_n4",
+            "body_font": "geist_n4",
+            "button_label": "SHOP NOW",
+            "background_color": "#030206",
+            "text_color": "#FFFFFF",
+            "button_color": "#FFFFFF",
+            "button_text_color": "#030206",
+            "button_hover_color": "#68021F",
+            "button_hover_text_color": "#FFFFFF",
+            "focus_color": "#F7F3E6",
+            "button_radius": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_d571903_BLjfPc"
+      ],
+      "settings": {}
+    },
     "custom_liquid_rKJMDP": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -229,6 +272,7 @@
     "custom_liquid_HKGDwH",
     "featured_collection",
     "custom_liquid_gifj4r",
+    "1788504645c1a1ce32",
     "custom_liquid_rKJMDP",
     "custom_liquid_ELc84p",
     "featured_blog_KRYgVt"
