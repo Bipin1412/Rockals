@@ -75,8 +75,8 @@
             "vendor_size": 16,
             "title_size": 14,
             "price_size": 18,
-            "image_background": "#F5F5F5",
-            "text_color": "#F3F1F1",
+            "image_background": "#f5f5f5",
+            "text_color": "#f3f1f1",
             "vendor_color": "#666666",
             "compare_color": "#666666"
           },
@@ -209,12 +209,12 @@
             "body_font": "geist_n4",
             "button_label": "SHOP NOW",
             "background_color": "#030206",
-            "text_color": "#FFFFFF",
-            "button_color": "#FFFFFF",
+            "text_color": "#ffffff",
+            "button_color": "#ffffff",
             "button_text_color": "#030206",
-            "button_hover_color": "#68021F",
-            "button_hover_text_color": "#FFFFFF",
-            "focus_color": "#F7F3E6",
+            "button_hover_color": "#68021f",
+            "button_hover_text_color": "#ffffff",
+            "focus_color": "#f7f3e6",
             "button_radius": 40
           },
           "blocks": {}
@@ -253,6 +253,58 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "17885055314534da37": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ff0a48b_XKCL7b": {
+          "type": "ai_gen_block_ff0a48b",
+          "settings": {
+            "heading": "Shop by category",
+            "button_label": "Shop Now",
+            "desktop_width_percent": 100,
+            "heading_alignment": "left",
+            "product_1": "aakar-black-chrome",
+            "image_1": "shopify://shop_images/Rockals4.jpg",
+            "label_1": "Powder Black",
+            "product_2": "aakar-navy-ember",
+            "image_2": "shopify://shop_images/Rockals1_c17969eb-48e2-4e17-b4b6-623e777713dd.jpg",
+            "label_2": "Saffron",
+            "product_3": "taksh-powder-black",
+            "image_3": "shopify://shop_images/Rockals2.png",
+            "label_3": "Black Chrome",
+            "product_4": "aakar-navy-ember",
+            "image_4": "shopify://shop_images/Rockals3.png",
+            "label_4": "Navy Ember",
+            "heading_font": "archivo_black_n4",
+            "body_font": "geist_n4",
+            "heading_size": 30,
+            "mobile_heading_size": 24,
+            "label_size": 15,
+            "grid_gap": 16,
+            "section_spacing": 32,
+            "mobile_spacing": 20,
+            "card_radius": 0,
+            "button_radius": 0,
+            "background_color": "#030206",
+            "card_color": "#011333",
+            "image_background": "#0b1933",
+            "text_color": "#f7f3e6",
+            "card_border_color": "#35435a",
+            "button_color": "#aa0236",
+            "button_text_color": "#f7f3e6",
+            "button_hover_color": "#68021f",
+            "button_hover_text_color": "#f7f3e6",
+            "placeholder_color": "#8f9aae",
+            "focus_color": "#f7f3e6"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ff0a48b_XKCL7b"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -264,6 +316,7 @@
     "custom_liquid_gifj4r",
     "1788504645c1a1ce32",
     "custom_liquid_ELc84p",
-    "featured_blog_KRYgVt"
+    "featured_blog_KRYgVt",
+    "17885055314534da37"
   ]
 }
