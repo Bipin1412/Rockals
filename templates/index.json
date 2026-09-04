@@ -63,7 +63,7 @@
             ],
             "show_vendor": true,
             "show_compare_price": true,
-            "desktop_width_percent": 95,
+            "desktop_width_percent": 100,
             "mobile_columns": "2",
             "text_alignment": "center",
             "image_height": 360,
