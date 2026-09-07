@@ -79,8 +79,8 @@
           "type": "ai_gen_block_e20e92c",
           "settings": {
             "desktop_width_percent": 100,
-            "desktop_height": 520,
-            "mobile_height": 430,
+            "desktop_height": 700,
+            "mobile_height": 600,
             "overlay_opacity": 70,
             "heading_size": 60,
             "content_width": 60,
