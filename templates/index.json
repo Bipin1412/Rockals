@@ -74,10 +74,28 @@
             "compare_color": "#666666"
           },
           "blocks": {}
+        },
+        "ai_gen_block_f152659_CE4PYD": {
+          "type": "ai_gen_block_f152659",
+          "settings": {
+            "heading_text": "Explore Our Collection",
+            "heading_font": "assistant_n4",
+            "text_alignment": "center",
+            "font_size": 36,
+            "mobile_font_size": 28,
+            "letter_spacing": 1,
+            "vertical_padding": 32,
+            "desktop_width_percent": 100,
+            "transparent_background": false,
+            "background_color": "#030206",
+            "text_color": "#f7f3e6"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_fef3589_KKHGTf"
+        "ai_gen_block_fef3589_KKHGTf",
+        "ai_gen_block_f152659_CE4PYD"
       ],
       "settings": {}
     },
@@ -272,6 +290,10 @@
     "17887761927d34310a": {
       "type": "_blocks",
       "settings": {}
+    },
+    "1788783810444c8517": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -282,6 +304,7 @@
     "1788504645c1a1ce32",
     "featured_blog_KRYgVt",
     "17885055314534da37",
-    "17887761927d34310a"
+    "17887761927d34310a",
+    "1788783810444c8517"
   ]
 }
