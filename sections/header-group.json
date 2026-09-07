@@ -62,7 +62,7 @@
       "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<style>#shopify-section-template--27883115708786__1788503024de5f8046 { padding-top: 80px !important; }</style>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
