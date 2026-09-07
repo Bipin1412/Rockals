@@ -62,7 +62,7 @@
             "image_height": 360,
             "mobile_image_height": 220,
             "product_gap": 0,
-            "heading_spacing": 12,
+            "heading_spacing": 16,
             "details_spacing": 24,
             "heading_size": 36,
             "vendor_size": 16,
