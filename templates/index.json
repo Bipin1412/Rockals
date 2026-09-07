@@ -303,6 +303,10 @@
         "ai_gen_block_ff0a48b_XKCL7b"
       ],
       "settings": {}
+    },
+    "17887761927d34310a": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -312,6 +316,7 @@
     "featured_collection",
     "1788504645c1a1ce32",
     "featured_blog_KRYgVt",
-    "17885055314534da37"
+    "17885055314534da37",
+    "17887761927d34310a"
   ]
 }
