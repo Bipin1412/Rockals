@@ -66,6 +66,54 @@
         "padding_bottom": 36
       }
     },
+    "178877723692ead060": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b01a43f_eRmXbX": {
+          "type": "ai_gen_block_b01a43f",
+          "settings": {
+            "source_1": "product",
+            "image_1": "shopify://shop_images/Rockals1-97_d09a94a1-9764-44f9-8e49-1df8014261e5.jpg",
+            "product_1": "taksh-saffron",
+            "link_1": "",
+            "source_2": "product",
+            "image_2": "shopify://shop_images/Rockals1-59-HDR-1.jpg",
+            "product_2": "taksh-powder-black",
+            "link_2": "",
+            "source_3": "product",
+            "image_3": "shopify://shop_images/Rockals1-76-Edit.jpg",
+            "product_3": "aakar-black-chrome",
+            "link_3": "",
+            "source_4": "product",
+            "image_4": "shopify://shop_images/Rockals1-67-1.jpg",
+            "product_4": "aakar-navy-ember",
+            "link_4": "",
+            "source_5": "product",
+            "image_5": "shopify://shop_images/Rockals1-133-1.jpg",
+            "product_5": "taksh-powder-black",
+            "link_5": "",
+            "desktop_width_percent": "100",
+            "desktop_height": 640,
+            "mobile_image_height": 300,
+            "featured_position": "right",
+            "mobile_featured_position": "first",
+            "grid_gap": 12,
+            "mobile_gap": 8,
+            "horizontal_padding": 0,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "border_radius": 10,
+            "background_color": "#030206",
+            "enable_hover_zoom": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b01a43f_eRmXbX"
+      ],
+      "settings": {}
+    },
     "custom_liquid_gna8kH": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -81,6 +129,7 @@
     "image_banner_LVjmxH",
     "banner",
     "product-grid",
+    "178877723692ead060",
     "custom_liquid_gna8kH"
   ]
 }
