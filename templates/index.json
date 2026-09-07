@@ -74,45 +74,10 @@
             "compare_color": "#666666"
           },
           "blocks": {}
-        },
-        "ai_gen_block_e20e92c_n7b9Cj": {
-          "type": "ai_gen_block_e20e92c",
-          "settings": {
-            "desktop_width_percent": 100,
-            "desktop_height": 700,
-            "mobile_height": 600,
-            "overlay_opacity": 70,
-            "heading_size": 60,
-            "content_width": 60,
-            "autoplay": true,
-            "autoplay_speed": 4,
-            "show_dots": false,
-            "show_arrows": true,
-            "slide_1_eyebrow": "",
-            "slide_1_heading": "",
-            "slide_1_description": "",
-            "slide_1_button": "Shop Now",
-            "slide_1_link": "",
-            "slide_1_position": "left",
-            "slide_2_eyebrow": "",
-            "slide_2_heading": "",
-            "slide_2_description": "",
-            "slide_2_button": "",
-            "slide_2_link": "",
-            "slide_2_position": "left",
-            "slide_3_eyebrow": "",
-            "slide_3_heading": "",
-            "slide_3_description": "",
-            "slide_3_button": "",
-            "slide_3_link": "",
-            "slide_3_position": "left"
-          },
-          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_fef3589_KKHGTf",
-        "ai_gen_block_e20e92c_n7b9Cj"
+        "ai_gen_block_fef3589_KKHGTf"
       ],
       "settings": {}
     },
