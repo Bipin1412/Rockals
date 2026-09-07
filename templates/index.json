@@ -28,7 +28,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/Rockals_bannner.jpg",
+        "image": "shopify://shop_images/Banner_Image_Updated_size.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -74,10 +74,45 @@
             "compare_color": "#666666"
           },
           "blocks": {}
+        },
+        "ai_gen_block_e20e92c_n7b9Cj": {
+          "type": "ai_gen_block_e20e92c",
+          "settings": {
+            "desktop_width_percent": 100,
+            "desktop_height": 520,
+            "mobile_height": 430,
+            "overlay_opacity": 70,
+            "heading_size": 60,
+            "content_width": 60,
+            "autoplay": true,
+            "autoplay_speed": 4,
+            "show_dots": false,
+            "show_arrows": true,
+            "slide_1_eyebrow": "NEW LAUNCH OFFER",
+            "slide_1_heading": "Step Into Style",
+            "slide_1_description": "Flat 10% OFF on your first ROCKALS order.",
+            "slide_1_button": "Shop Now",
+            "slide_1_link": "",
+            "slide_1_position": "left",
+            "slide_2_eyebrow": "LIMITED TIME DEAL",
+            "slide_2_heading": "Flat ₹300 OFF",
+            "slide_2_description": "On orders above ₹2499. Upgrade your sneaker game today.",
+            "slide_2_button": "Grab Offer",
+            "slide_2_link": "",
+            "slide_2_position": "left",
+            "slide_3_eyebrow": "BEST SELLERS",
+            "slide_3_heading": "Most Selling Sneakers",
+            "slide_3_description": "Explore our customer-favourite ROCKALS collection.",
+            "slide_3_button": "View Collection",
+            "slide_3_link": "",
+            "slide_3_position": "left"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_fef3589_KKHGTf"
+        "ai_gen_block_fef3589_KKHGTf",
+        "ai_gen_block_e20e92c_n7b9Cj"
       ],
       "settings": {}
     },
@@ -124,16 +159,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "custom_liquid_HKGDwH": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section class=\"rockals-slider\">\n\n  <div class=\"slider-track\">\n\n    <!-- Banner 1: Offer -->\n    <div class=\"slide active\" style=\"background-image:url('https://i.pinimg.com/1200x/42/d6/2a/42d62ab3dc7af0549e241d945bfd35e0.jpg');\">\n      <div class=\"slide-content\">\n        <span>NEW LAUNCH OFFER</span>\n        <h2>Step Into Style</h2>\n        <p>Flat 10% OFF on your first ROCKALS order.</p>\n        <a href=\"/collections/all\">Shop Now</a>\n      </div>\n    </div>\n\n    <!-- Banner 2: Discount -->\n    <div class=\"slide\" style=\"background-image:url('https://i.pinimg.com/1200x/e9/ae/f9/e9aef9a64afc33347a418ba5d78bd073.jpg');\">\n      <div class=\"slide-content\">\n        <span>LIMITED TIME DEAL</span>\n        <h2>Flat ₹300 OFF</h2>\n        <p>On orders above ₹2499. Upgrade your sneaker game today.</p>\n        <a href=\"/collections/all\">Grab Offer</a>\n      </div>\n    </div>\n\n    <!-- Banner 3: Most Selling -->\n    <div class=\"slide\" style=\"background-image:url('https://i.pinimg.com/736x/64/43/5a/64435a5c8df2601f5cfbd518335e1c10.jpg');\">\n      <div class=\"slide-content\">\n        <span>BEST SELLERS</span>\n        <h2>Most Selling Sneakers</h2>\n        <p>Explore our customer-favourite ROCKALS collection.</p>\n        <a href=\"/collections/best-sellers\">View Collection</a>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"slider-dots\">\n    <span class=\"dot active\"></span>\n    <span class=\"dot\"></span>\n    <span class=\"dot\"></span>\n  </div>\n\n</section>\n\n<style>\n.rockals-slider{\n  position:relative;\n  width:100%;\n  height:520px;\n  overflow:hidden;\n}\n\n.slider-track{\n  width:100%;\n  height:100%;\n  position:relative;\n}\n\n.slide{\n  position:absolute;\n  inset:0;\n  opacity:0;\n  visibility:hidden;\n  background-size:cover;\n  background-position:center;\n  transition:opacity 1s ease;\n}\n\n.slide::before{\n  content:\"\";\n  position:absolute;\n  inset:0;\n  background:linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.25));\n}\n\n.slide.active{\n  opacity:1;\n  visibility:visible;\n}\n\n.slide-content{\n  position:relative;\n  z-index:2;\n  max-width:600px;\n  padding:120px 70px;\n  color:#fff;\n}\n\n.slide-content span{\n  font-size:13px;\n  letter-spacing:3px;\n  font-weight:700;\n}\n\n.slide-content h2{\n  font-size:60px;\n  line-height:1.1;\n  margin:18px 0;\n}\n\n.slide-content p{\n  font-size:18px;\n  line-height:1.7;\n  margin-bottom:30px;\n}\n\n.slide-content a{\n  display:inline-block;\n  background:#fff;\n  color:#111;\n  padding:14px 34px;\n  border-radius:40px;\n  text-decoration:none;\n  font-weight:700;\n}\n\n.slider-dots{\n  position:absolute;\n  bottom:25px;\n  left:70px;\n  z-index:5;\n  display:flex;\n  gap:10px;\n}\n\n.dot{\n  width:12px;\n  height:12px;\n  background:#fff;\n  opacity:.4;\n  border-radius:50%;\n}\n\n.dot.active{\n  opacity:1;\n}\n\n@media(max-width:768px){\n  .rockals-slider{\n    height:430px;\n  }\n\n  .slide-content{\n    padding:90px 25px;\n  }\n\n  .slide-content h2{\n    font-size:36px;\n  }\n\n  .slide-content p{\n    font-size:15px;\n  }\n\n  .slider-dots{\n    left:25px;\n  }\n}\n</style>\n\n<script>\nlet currentSlide = 0;\nconst slides = document.querySelectorAll('.rockals-slider .slide');\nconst dots = document.querySelectorAll('.rockals-slider .dot');\n\nfunction showSlide(index){\n  slides.forEach(slide => slide.classList.remove('active'));\n  dots.forEach(dot => dot.classList.remove('active'));\n\n  slides[index].classList.add('active');\n  dots[index].classList.add('active');\n}\n\nsetInterval(() => {\n  currentSlide = (currentSlide + 1) % slides.length;\n  showSlide(currentSlide);\n}, 3500);\n</script>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "featured_collection": {
@@ -284,7 +309,6 @@
     "image_banner",
     "1788503024de5f8046",
     "collection_list_6RfGcU",
-    "custom_liquid_HKGDwH",
     "featured_collection",
     "1788504645c1a1ce32",
     "featured_blog_KRYgVt",
