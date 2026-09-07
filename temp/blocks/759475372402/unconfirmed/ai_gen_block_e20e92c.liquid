@@ -1,6 +1,215 @@
+{% doc %}
+  @prompt
+    Create a premium full-width hero image slider section for my Shopify sneaker brand “ROCKALS”.
+    
+    The section should be designed specifically for Shopify and should work properly with the Shopify Theme Editor.
+    
+    Create 3 promotional slides.
+    
+    Slide 1:
+    Small text: NEW LAUNCH OFFER
+    Heading: Step Into Style
+    Description: Flat 10% OFF on your first ROCKALS order.
+    Button text: Shop Now
+    Button link: /collections/all
+    
+    Slide 2:
+    Small text: LIMITED TIME DEAL
+    Heading: Flat ₹300 OFF
+    Description: On orders above ₹2499. Upgrade your sneaker game today.
+    Button text: Grab Offer
+    Button link: /collections/all
+    
+    Slide 3:
+    Small text: BEST SELLERS
+    Heading: Most Selling Sneakers
+    Description: Explore our customer-favourite ROCKALS collection.
+    Button text: View Collection
+    Button link: /collections/best-sellers
+    
+    Design the slider with a premium Nike/Adidas-style sneaker brand aesthetic.
+    
+    Requirements:
+    
+    - Full-width hero banner.
+    - Desktop height around 520px.
+    - Mobile height around 430px.
+    - Use Shopify image picker for each slide.
+    - Allow separate desktop and mobile images.
+    - Background image should cover the complete banner without distortion.
+    - Add a dark transparent left-to-right gradient overlay for readability.
+    - Keep content positioned on the left side.
+    - Use large bold white typography.
+    - Main heading approximately 60px on desktop and 36px on mobile.
+    - Small heading should be uppercase with wide letter spacing.
+    - Description approximately 18px desktop and 15px mobile.
+    - Add a white pill-shaped CTA button with black text.
+    - Add a smooth hover animation to the button.
+    
+    Slider functionality:
+    
+    - Automatically change slides every 3.5 seconds.
+    - Smooth fade transition between slides.
+    - Infinite looping.
+    - Add pagination dots at the bottom-left.
+    - Active dot should be fully visible and inactive dots slightly transparent.
+    - Pagination dots should be clickable.
+    - Add optional previous and next arrows.
+    - Pause autoplay when hovering on desktop.
+    - Support swipe gestures on mobile if possible.
+    
+    Shopify customization settings:
+    
+    For every slide allow editing:
+    - Desktop image
+    - Mobile image
+    - Small heading
+    - Main heading
+    - Description
+    - Button text
+    - Button link
+    - Text position
+    
+    Section-level settings:
+    - Desktop banner height
+    - Mobile banner height
+    - Overlay opacity
+    - Autoplay on/off
+    - Autoplay speed
+    - Show/hide dots
+    - Show/hide arrows
+    - Heading size
+    - Content width
+    
+    Make the section fully responsive and optimized for desktop, tablet and mobile.
+    
+    Keep all CSS and JavaScript scoped only to this Shopify section so it does not affect other sections.
+    
+    Do not use external slider libraries. Use lightweight Liquid, CSS and vanilla JavaScript.
+    
+    Make sure the slider works properly inside the Shopify Theme Editor and does not create duplicate autoplay intervals when the section is reloaded.
+    
+    The final result should look clean, premium, modern and visually strong for a sneaker e-commerce website.
+    
+    make sure it is customizable and also it should be 1600 × 900 px 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-hero-{{ ai_gen_id }} { display: block; position: relative; width: 100%; height: {{ block.settings.desktop_height }}px; overflow: hidden; background: #030206; color: #fff; }
+  .ai-hero-{{ ai_gen_id }}__slides, .ai-hero-{{ ai_gen_id }}__slide { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .ai-hero-{{ ai_gen_id }}__slide { opacity: 0; visibility: hidden; transition: opacity .65s ease, visibility .65s ease; }
+  .ai-hero-{{ ai_gen_id }}__slide.is-active { opacity: 1; visibility: visible; z-index: 1; }
+  .ai-hero-{{ ai_gen_id }}__media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ai-hero-{{ ai_gen_id }}__placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: #202020; }
+  .ai-hero-{{ ai_gen_id }}__placeholder svg { width: 100%; height: 100%; opacity: .4; }
+  .ai-hero-{{ ai_gen_id }}__overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,{{ block.settings.overlay_opacity | divided_by: 100.0 }}) 0%, rgba(0,0,0,{{ block.settings.overlay_opacity | times: 0.55 | divided_by: 100.0 }}) 48%, rgba(0,0,0,0) 100%); }
+  .ai-hero-{{ ai_gen_id }}__content { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; width: {{ block.settings.content_width }}%; max-width: 1600px; margin: 0 auto; padding: 40px 6%; }
+  .ai-hero-{{ ai_gen_id }}__content--center { align-items: center; text-align: center; margin: 0 auto; }
+  .ai-hero-{{ ai_gen_id }}__content--right { align-items: flex-end; text-align: right; margin-left: auto; margin-right: 0; }
+  .ai-hero-{{ ai_gen_id }}__eyebrow { margin: 0 0 18px; color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+  .ai-hero-{{ ai_gen_id }}__heading { max-width: 760px; margin: 0 0 16px; color: #fff; font-size: {{ block.settings.heading_size }}px; line-height: .98; letter-spacing: -.04em; font-weight: 800; }
+  .ai-hero-{{ ai_gen_id }}__description { max-width: 560px; margin: 0 0 30px; color: #fff; font-size: 18px; line-height: 1.45; }
+  .ai-hero-{{ ai_gen_id }}__button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 28px; border-radius: 999px; background: #fff; color: #030206; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform .25s ease, background-color .25s ease, color .25s ease; }
+  .ai-hero-{{ ai_gen_id }}__button:hover { transform: translateY(-3px); background: #f0ece3; color: #030206; }
+  .ai-hero-{{ ai_gen_id }}__controls { position: absolute; z-index: 4; left: 6%; right: 6%; bottom: 28px; display: flex; align-items: center; justify-content: space-between; }
+  .ai-hero-{{ ai_gen_id }}__dots { display: flex; gap: 8px; }
+  .ai-hero-{{ ai_gen_id }}__dot { width: 34px; height: 3px; padding: 0; border: 0; background: rgba(255,255,255,.45); cursor: pointer; }
+  .ai-hero-{{ ai_gen_id }}__dot.is-active { background: #fff; }
+  .ai-hero-{{ ai_gen_id }}__arrows { display: flex; gap: 8px; }
+  .ai-hero-{{ ai_gen_id }}__arrow { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; background: rgba(0,0,0,.18); color: #fff; cursor: pointer; font-size: 20px; line-height: 1; }
+  .ai-hero-{{ ai_gen_id }}__arrow:hover, .ai-hero-{{ ai_gen_id }}__arrow:focus-visible { background: #fff; color: #030206; }
+  @media screen and (max-width: 749px) {
+    .ai-hero-{{ ai_gen_id }} { height: {{ block.settings.mobile_height }}px; }
+    .ai-hero-{{ ai_gen_id }}__content { width: 100%; padding: 32px 22px 74px; justify-content: flex-end; }
+    .ai-hero-{{ ai_gen_id }}__content--right, .ai-hero-{{ ai_gen_id }}__content--center { align-items: flex-start; text-align: left; margin: 0; }
+    .ai-hero-{{ ai_gen_id }}__heading { font-size: 36px; }
+    .ai-hero-{{ ai_gen_id }}__description { font-size: 15px; margin-bottom: 22px; }
+    .ai-hero-{{ ai_gen_id }}__controls { left: 22px; right: 22px; bottom: 22px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .ai-hero-{{ ai_gen_id }}__slide, .ai-hero-{{ ai_gen_id }}__button { transition: none; } }
+{% endstyle %}
+
+<rockals-hero-{{ ai_gen_id }} class="ai-hero-{{ ai_gen_id }}" data-autoplay="{{ block.settings.autoplay }}" data-speed="{{ block.settings.autoplay_speed | times: 1000 }}" {{ block.shopify_attributes }}>
+  <div class="ai-hero-{{ ai_gen_id }}__slides">
+    {% for i in (1..3) %}
+      {% liquid
+        assign desktop_key = 'slide_' | append: i | append: '_desktop'
+        assign mobile_key = 'slide_' | append: i | append: '_mobile'
+        assign eyebrow_key = 'slide_' | append: i | append: '_eyebrow'
+        assign heading_key = 'slide_' | append: i | append: '_heading'
+        assign description_key = 'slide_' | append: i | append: '_description'
+        assign button_key = 'slide_' | append: i | append: '_button'
+        assign link_key = 'slide_' | append: i | append: '_link'
+        assign position_key = 'slide_' | append: i | append: '_position'
+        assign desktop_image = block.settings[desktop_key]
+        assign mobile_image = block.settings[mobile_key]
+      %}
+      <article class="ai-hero-{{ ai_gen_id }}__slide{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
+        {% if desktop_image or mobile_image %}<picture>{% if mobile_image %}<source media="(max-width: 749px)" srcset="{{ mobile_image | image_url: width: 1600 }}">{% endif %}{% if desktop_image %}<img class="ai-hero-{{ ai_gen_id }}__media" src="{{ desktop_image | image_url: width: 2400 }}" alt="{{ desktop_image.alt | escape }}" width="1600" height="900" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">{% else %}<img class="ai-hero-{{ ai_gen_id }}__media" src="{{ mobile_image | image_url: width: 1600 }}" alt="{{ mobile_image.alt | escape }}" width="1600" height="900" loading="lazy">{% endif %}</picture>{% else %}<div class="ai-hero-{{ ai_gen_id }}__placeholder">{{ 'image' | placeholder_svg_tag }}</div>{% endif %}
+        <div class="ai-hero-{{ ai_gen_id }}__overlay"></div>
+        <div class="ai-hero-{{ ai_gen_id }}__content ai-hero-{{ ai_gen_id }}__content--{{ block.settings[position_key] }}">
+          <p class="ai-hero-{{ ai_gen_id }}__eyebrow">{{ block.settings[eyebrow_key] }}</p>
+          <h2 class="ai-hero-{{ ai_gen_id }}__heading">{{ block.settings[heading_key] }}</h2>
+          <p class="ai-hero-{{ ai_gen_id }}__description">{{ block.settings[description_key] }}</p>
+          {% if block.settings[link_key] != blank %}<a class="ai-hero-{{ ai_gen_id }}__button" href="{{ block.settings[link_key] }}">{{ block.settings[button_key] }}</a>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  <div class="ai-hero-{{ ai_gen_id }}__controls">
+    {% if block.settings.show_dots %}<div class="ai-hero-{{ ai_gen_id }}__dots" role="tablist" aria-label="Hero slides">{% for i in (1..3) %}<button class="ai-hero-{{ ai_gen_id }}__dot{% if forloop.first %} is-active{% endif %}" type="button" data-slide="{{ forloop.index0 }}" role="tab" aria-label="Go to slide {{ i }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"></button>{% endfor %}</div>{% else %}<span></span>{% endif %}
+    {% if block.settings.show_arrows %}<div class="ai-hero-{{ ai_gen_id }}__arrows"><button class="ai-hero-{{ ai_gen_id }}__arrow" type="button" data-direction="prev" aria-label="Previous slide">&#8592;</button><button class="ai-hero-{{ ai_gen_id }}__arrow" type="button" data-direction="next" aria-label="Next slide">&#8594;</button></div>{% endif %}
+  </div>
+</rockals-hero-{{ ai_gen_id }}>
+
+<script>
+(function(){
+  class RockalsHero{{ ai_gen_id }} extends HTMLElement {
+    connectedCallback(){
+      this.slides=[...this.querySelectorAll('.ai-hero-{{ ai_gen_id }}__slide')]; this.dots=[...this.querySelectorAll('.ai-hero-{{ ai_gen_id }}__dot')]; this.index=0; this.timer=null; this.startX=0;
+      this.dots.forEach(dot=>dot.addEventListener('click',()=>this.go(Number(dot.dataset.slide))));
+      this.querySelectorAll('[data-direction]').forEach(button=>button.addEventListener('click',()=>this.go(this.index+(button.dataset.direction==='next'?1:-1))));
+      this.addEventListener('mouseenter',()=>this.stop()); this.addEventListener('mouseleave',()=>this.start());
+      this.addEventListener('touchstart',event=>{this.startX=event.changedTouches[0].screenX},{passive:true}); this.addEventListener('touchend',event=>{let distance=event.changedTouches[0].screenX-this.startX;if(Math.abs(distance)>45)this.go(this.index+(distance<0?1:-1));},{passive:true});
+      this.start();
+    }
+    disconnectedCallback(){this.stop()}
+    go(index){this.index=(index+this.slides.length)%this.slides.length;this.slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===this.index);slide.setAttribute('aria-hidden',i===this.index?'false':'true')});this.dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===this.index);dot.setAttribute('aria-selected',i===this.index?'true':'false')})}
+    start(){this.stop();if(this.dataset.autoplay==='true'&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)this.timer=setInterval(()=>this.go(this.index+1),Number(this.dataset.speed))}
+    stop(){if(this.timer){clearInterval(this.timer);this.timer=null}}
+  }
+  if(!customElements.get('rockals-hero-{{ ai_gen_id }}'))customElements.define('rockals-hero-{{ ai_gen_id }}',RockalsHero{{ ai_gen_id }});
+})();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Rockals hero slider",
+  "tag": null,
+  "class": "rockals-hero-block",
+  "settings": [
+    {"type":"header","content":"Slider settings"},
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"range","id":"desktop_height","label":"Desktop height","min":400,"max":700,"step":10,"unit":"px","default":520},
+    {"type":"range","id":"mobile_height","label":"Mobile height","min":320,"max":600,"step":10,"unit":"px","default":430},
+    {"type":"range","id":"overlay_opacity","label":"Overlay opacity","min":40,"max":90,"step":5,"unit":"%","default":70},
+    {"type":"range","id":"heading_size","label":"Heading size","min":40,"max":80,"step":5,"unit":"px","default":60},
+    {"type":"range","id":"content_width","label":"Content width","min":40,"max":80,"step":5,"unit":"%","default":60},
+    {"type":"checkbox","id":"autoplay","label":"Autoplay slides","default":true},
+    {"type":"range","id":"autoplay_speed","label":"Autoplay speed","min":2,"max":8,"step":1,"unit":"s","default":4},
+    {"type":"checkbox","id":"show_dots","label":"Show dots","default":true},
+    {"type":"checkbox","id":"show_arrows","label":"Show arrows","default":true},
+    {"type":"header","content":"Slide 1"},
+    {"type":"image_picker","id":"slide_1_desktop","label":"Desktop image"},{"type":"image_picker","id":"slide_1_mobile","label":"Mobile image"},
+    {"type":"text","id":"slide_1_eyebrow","label":"Small heading","default":"NEW LAUNCH OFFER"},{"type":"text","id":"slide_1_heading","label":"Main heading","default":"Step Into Style"},{"type":"textarea","id":"slide_1_description","label":"Description","default":"Flat 10% OFF on your first ROCKALS order."},{"type":"text","id":"slide_1_button","label":"Button text","default":"Shop Now"},{"type":"url","id":"slide_1_link","label":"Button link"},{"type":"select","id":"slide_1_position","label":"Text position","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}],"default":"left"},
+    {"type":"header","content":"Slide 2"},
+    {"type":"image_picker","id":"slide_2_desktop","label":"Desktop image"},{"type":"image_picker","id":"slide_2_mobile","label":"Mobile image"},
+    {"type":"text","id":"slide_2_eyebrow","label":"Small heading","default":"LIMITED TIME DEAL"},{"type":"text","id":"slide_2_heading","label":"Main heading","default":"Flat ₹300 OFF"},{"type":"textarea","id":"slide_2_description","label":"Description","default":"On orders above ₹2499. Upgrade your sneaker game today."},{"type":"text","id":"slide_2_button","label":"Button text","default":"Grab Offer"},{"type":"url","id":"slide_2_link","label":"Button link"},{"type":"select","id":"slide_2_position","label":"Text position","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}],"default":"left"},
+    {"type":"header","content":"Slide 3"},
+    {"type":"image_picker","id":"slide_3_desktop","label":"Desktop image"},{"type":"image_picker","id":"slide_3_mobile","label":"Mobile image"},
+    {"type":"text","id":"slide_3_eyebrow","label":"Small heading","default":"BEST SELLERS"},{"type":"text","id":"slide_3_heading","label":"Main heading","default":"Most Selling Sneakers"},{"type":"textarea","id":"slide_3_description","label":"Description","default":"Explore our customer-favourite ROCKALS collection."},{"type":"text","id":"slide_3_button","label":"Button text","default":"View Collection"},{"type":"url","id":"slide_3_link","label":"Button link"},{"type":"select","id":"slide_3_position","label":"Text position","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}],"default":"left"}
+  ],
+  "presets": [{"name":"Rockals hero slider"}]
+}
 {% endschema %}
