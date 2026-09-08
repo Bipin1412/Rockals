@@ -40,6 +40,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "custom_css": [],
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
