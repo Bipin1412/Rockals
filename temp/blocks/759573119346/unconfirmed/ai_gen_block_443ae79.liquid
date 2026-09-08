@@ -1,6 +1,166 @@
-{% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
-{% endschema %}
+{% doc %}
+  @prompt
+    Create a premium Shopify product carousel section that closely matches the layout and visual structure of the reference image I provided.
+    
+    IMPORTANT:
+    This section must use REAL Shopify product data. Do not hardcode product names, prices, images, URLs, or dummy products. Allow me to select a Shopify collection from the Theme Editor and automatically display products from that collection.
+    
+    DESIGN STYLE:
+    Create a clean, minimal, premium footwear product showcase with a luxury editorial/e-commerce feel.
+    
+    SECTION LAYOUT:
+    - Full-width section.
+    - White or very light off-white background.
+    - Products displayed horizontally in a slider/carousel.
+    - On desktop show approximately 4 products across the screen.
+    - Each product card should have equal width and equal height.
+    - Add thin 1px vertical divider lines between product cards.
+    - No large gaps between cards.
+    - Cards should feel like one continuous full-width grid.
+    - Avoid rounded product-card containers.
+    - No shadows around the cards.
+    - Overall appearance should be minimal and sophisticated.
+    
+    PRODUCT CARD STRUCTURE:
+    
+    TOP AREA:
+    At the top-left corner of selected product cards, allow an optional small rectangular badge.
+    
+    Examples:
+    RESTOCKED
+    NEW LAUNCH
+    BESTSELLER
+    LIMITED
+    NEW
+    
+    Badge design:
+    - Small rectangular badge.
+    - Uppercase text.
+    - Bold compact typography.
+    - Minimal padding.
+    - Badge color and text color editable from Theme Editor.
+    - Each product/block should allow the badge to be enabled or disabled.
+    - Badge text should be editable.
+    
+    Optionally allow a second small decorative label or text near the top-right/top-center area of the card, but keep it disabled by default.
+    
+    PRODUCT IMAGE:
+    - Use the Shopify product featured image dynamically.
+    - Product image should occupy the main visual area of the card.
+    - Keep plenty of whitespace around the shoe/product.
+    - Image should be centered horizontally and vertically.
+    - Use object-fit: contain.
+    - Do not crop the product.
+    - Make the image large enough to feel premium, similar to the reference.
+    - Maintain the original image aspect ratio.
+    - Add a very subtle hover zoom animation, approximately scale(1.03), with smooth easing.
+    - Clicking the product image should open the product page.
+    
+    PRODUCT INFORMATION:
+    Place the product information near the bottom of the card.
+    
+    Bottom-left:
+    - Product title in uppercase.
+    - Clean modern sans-serif typography.
+    - Medium font weight.
+    - Approximately 16–18px on desktop.
+    - Under the product title show an optional secondary line.
+    
+    The secondary line can display:
+    - Product subtitle
+    - Product type
+    - Vendor
+    - Metafield
+    or custom text.
+    
+    Make this secondary text:
+    - Light grey
+    - Smaller than product title
+    - Approximately 13–15px
+    - Optional from Theme Editor.
+    
+    Bottom-right:
+    Display the Shopify product price.
+    
+    Example:
+    ₹ 5299
+    
+    Requirements:
+    - Use Shopify money formatting.
+    - Automatically use the store currency.
+    - Do not hardcode ₹.
+    - Align the price visually with the product title.
+    - Medium/semi-bold font weight.
+    - If product has a compare-at price, optionally show the original price with strikethrough and the current price beside it.
+    - Add a Theme Editor option to show/hide compare-at price.
+    
+    CARD HEIGHT:
+    The product cards should be tall and editorial, similar to the reference image.
+    
+    Desktop approximate height:
+    450–520px
+    
+    Structure approximately:
+    - Top badge area: 10–15%
+    - Product image area: 60–65%
+    - Product information area: 20–25%
+    
+    Keep the product details aligned consistently across every card regardless of image dimensions.
+    
+    CAROUSEL / SLIDER:
+    Create a smooth horizontal product slider.
+    
+    Desktop:
+    - Show 4 products at a time when enough screen width is available.
+    - Product width should adapt responsively.
+    - Show a circular next arrow button partially overlaying the right side of the section.
+    - Show a previous arrow when appropriate.
+    - Arrow buttons should be approximately 36–42px.
+    - Circular grey background.
+    - White arrow icon.
+    - Keep arrow design minimal.
+    - Hide previous arrow when already at the first slide if possible.
+    - Hide next arrow when at the final slide if possible.
+    
+    Slider behavior:
+    - Smooth horizontal movement.
+    - Use CSS scroll snap or lightweight vanilla JavaScript.
+    - Do NOT use external slider libraries.
+    - Do NOT load jQuery.
+    - Support mouse drag where possible.
+    - Support touch swipe on mobile.
+    - Prevent page reload when navigating slider.
+    - Slider should remain performant.
+    
+    OPTIONAL AUTOPLAY:
+    Add Theme Editor options for:
+    - Enable/disable autoplay
+    - Autoplay delay
+    - Default autoplay OFF
+    
+    RESPONSIVE DESIGN:
+    
+    Desktop 1200px+:
+    - Approximately 4 products visible.
+    - Thin vertical separators.
+    - Large product images.
+    
+    Tablet:
+    - Approximately 2–3 products visible.
+    
+    Mobile:
+    - Display approximately 1.1–1.3 products so part of the next product is visible.
+    - Enable horizontal swipe.
+    - Keep cards readable.
+    - Reduce card height.
+    - Product title approximately 14–16px.
+    - Price approximately 14–16px.
+    - Product image should remain fully visible.
+    - Keep vertical separators.
+    - Avoid horizontal page overflow
+    , i am unable to select the product from my gallery , i should able to select different a product 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% style %}.ai-pc-{{ ai_gen_id }}{display:block;width:100%;background:#f7f3e6;color:#011333;overflow:hidden}.ai-pc-{{ ai_gen_id }}__track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;width:{{ block.settings.desktop_width_percent }}%;max-width:100%;margin:auto}.ai-pc-{{ ai_gen_id }}__track::-webkit-scrollbar{display:none}.ai-pc-{{ ai_gen_id }}__card{flex:0 0 25%;height:{{ block.settings.card_height }}px;box-sizing:border-box;padding:16px;border-right:1px solid #d7d4cc;scroll-snap-align:start;display:flex;flex-direction:column}.ai-pc-{{ ai_gen_id }}__media{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}.ai-pc-{{ ai_gen_id }}__media img{width:100%;height:100%;object-fit:contain;transition:transform .35s ease}.ai-pc-{{ ai_gen_id }}__card:hover img{transform:scale(1.03)}.ai-pc-{{ ai_gen_id }}__info{display:flex;justify-content:space-between;gap:10px;align-items:end;padding-top:16px}.ai-pc-{{ ai_gen_id }}__title{margin:0;text-transform:uppercase;font-size:16px;font-weight:500}.ai-pc-{{ ai_gen_id }}__price{white-space:nowrap;font-size:15px;font-weight:600}.ai-pc-{{ ai_gen_id }}__empty{padding:40px;text-align:center}@media(max-width:989px){.ai-pc-{{ ai_gen_id }}__card{flex-basis:33.333%}}@media(max-width:749px){.ai-pc-{{ ai_gen_id }}__card{flex-basis:80%;height:{{ block.settings.mobile_height }}px}.ai-pc-{{ ai_gen_id }}__title{font-size:14px}.ai-pc-{{ ai_gen_id }}__price{font-size:14px}}{% endstyle %}
+<product-picker-{{ ai_gen_id }} class="ai-pc-{{ ai_gen_id }}" {{ block.shopify_attributes }}><div class="ai-pc-{{ ai_gen_id }}__track">{% assign product_count = 0 %}{% for i in (1..8) %}{% assign key = 'product_' | append: i %}{% assign product = block.settings[key] %}{% if product != blank %}{% assign product_count = product_count | plus: 1 %}<article class="ai-pc-{{ ai_gen_id }}__card"><a class="ai-pc-{{ ai_gen_id }}__media" href="{{ product.url }}">{% if product.featured_image %}<img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}">{% else %}{{ 'product-apparel-1' | placeholder_svg_tag }}{% endif %}</a><div class="ai-pc-{{ ai_gen_id }}__info"><h3 class="ai-pc-{{ ai_gen_id }}__title">{{ product.title }}</h3><span class="ai-pc-{{ ai_gen_id }}__price">{{ product.price | money }}</span></div></article>{% endif %}{% endfor %}{% if product_count == 0 %}<p class="ai-pc-{{ ai_gen_id }}__empty">Select products in the settings below.</p>{% endif %}</div></product-picker-{{ ai_gen_id }}>
+{% schema %}{"name":"Product picker carousel","settings":[{"type":"header","content":"Choose products"},{"type":"product","id":"product_1","label":"Product 1"},{"type":"product","id":"product_2","label":"Product 2"},{"type":"product","id":"product_3","label":"Product 3"},{"type":"product","id":"product_4","label":"Product 4"},{"type":"product","id":"product_5","label":"Product 5"},{"type":"product","id":"product_6","label":"Product 6"},{"type":"product","id":"product_7","label":"Product 7"},{"type":"product","id":"product_8","label":"Product 8"},{"type":"header","content":"Layout"},{"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},{"type":"range","id":"card_height","label":"Card height","min":400,"max":600,"step":10,"unit":"px","default":500},{"type":"range","id":"mobile_height","label":"Mobile card height","min":300,"max":500,"step":10,"unit":"px","default":390}],"presets":[{"name":"Product picker carousel"}],"tag":null,"class":"product-picker-carousel"}{% endschema %}
