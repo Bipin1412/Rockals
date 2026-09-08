@@ -1,6 +1,57 @@
-{% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
-{% endschema %}
+{% doc %}
+  @prompt
+    Redesign the existing footer section to match a 4-column layout inspired by a modern e-commerce footer. Keep all existing footer content (links, social icons, copyright, newsletter) exactly as-is — only change the design. Requirements: light grey background (#f5f5f5), 4 columns: (1) Newsletter signup with bold uppercase heading "LET'S GET IN TOUCH", a short subtitle, email input field, and a solid red/accent "SUBSCRIBE NOW" button; (2) Quick Links column with bold uppercase heading and nav links; (3) Company column with bold uppercase heading and policy/info links; (4) Logo column showing the ROCKALS logo image prominently with social media icons below it. Clean copyright line at the bottom left. Minimal spacing, bold column headings, no borders, mobile responsive stacking. Keep the dark text on light background for contrast.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% assign ai_form_class = 'ai-footer-' | append: ai_gen_id | append: '__form' %}
+
+{% style %}
+  .ai-footer-{{ ai_gen_id }} { display:block; width:{{ block.settings.desktop_width_percent }}%; max-width:100%; margin:0 auto; background:#f5f5f5; color:#121212; }
+  .ai-footer-{{ ai_gen_id }}__inner { max-width:1600px; margin:0 auto; padding:42px 5%; }
+  .ai-footer-{{ ai_gen_id }}__grid { display:grid; grid-template-columns:1.45fr 1fr 1fr 1fr; gap:34px; align-items:start; }
+  .ai-footer-{{ ai_gen_id }}__heading { margin:0 0 14px; color:#121212; font-family:{{ settings.type_header_font.family }},sans-serif; font-size:15px; font-weight:700; letter-spacing:.08em; line-height:1.2; text-transform:uppercase; }
+  .ai-footer-{{ ai_gen_id }}__subtitle { max-width:290px; margin:0 0 18px; color:#333; font-size:14px; line-height:1.5; }
+  .ai-footer-{{ ai_gen_id }}__form { display:flex; max-width:430px; }
+  .ai-footer-{{ ai_gen_id }}__input { min-width:0; flex:1; padding:13px 14px; border:1px solid #b5b5b5; border-radius:0; background:#fff; color:#121212; font:inherit; }
+  .ai-footer-{{ ai_gen_id }}__input:focus,.ai-footer-{{ ai_gen_id }}__button:focus-visible,.ai-footer-{{ ai_gen_id }}__link:focus-visible,.ai-footer-{{ ai_gen_id }}__social-link:focus-visible { outline:2px solid #68021f; outline-offset:2px; }
+  .ai-footer-{{ ai_gen_id }}__button { padding:13px 17px; border:0; border-radius:0; background:#aa0236; color:#fff; cursor:pointer; font:inherit; font-size:12px; font-weight:700; letter-spacing:.04em; white-space:nowrap; }
+  .ai-footer-{{ ai_gen_id }}__button:hover { background:#68021f; }
+  .ai-footer-{{ ai_gen_id }}__list { display:grid; gap:9px; margin:0; padding:0; list-style:none; }
+  .ai-footer-{{ ai_gen_id }}__link { color:#242424; font-size:14px; line-height:1.4; text-decoration:none; }
+  .ai-footer-{{ ai_gen_id }}__link:hover { color:#68021f; text-decoration:underline; text-underline-offset:3px; }
+  .ai-footer-{{ ai_gen_id }}__logo { display:block; width:min(180px,100%); height:auto; margin:0 0 22px; object-fit:contain; object-position:left center; }
+  .ai-footer-{{ ai_gen_id }}__logo-placeholder { width:180px; max-width:100%; margin:0 0 22px; }
+  .ai-footer-{{ ai_gen_id }}__logo-placeholder svg { display:block; width:100%; height:auto; }
+  .ai-footer-{{ ai_gen_id }}__socials { display:flex; flex-wrap:wrap; gap:12px; }
+  .ai-footer-{{ ai_gen_id }}__social-link { display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; background:#121212; color:#fff; font-size:12px; font-weight:700; text-decoration:none; }
+  .ai-footer-{{ ai_gen_id }}__bottom { margin-top:34px; padding-top:18px; color:#444; font-size:13px; }
+  .ai-footer-{{ ai_gen_id }}__label { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  @media screen and (max-width:749px) { .ai-footer-{{ ai_gen_id }}__inner{padding:34px 6%;}.ai-footer-{{ ai_gen_id }}__grid{grid-template-columns:1fr 1fr;gap:30px 22px;}.ai-footer-{{ ai_gen_id }}__newsletter,.ai-footer-{{ ai_gen_id }}__logo-column{grid-column:1/-1;} }
+  @media screen and (max-width:449px) { .ai-footer-{{ ai_gen_id }}__grid{grid-template-columns:1fr;}.ai-footer-{{ ai_gen_id }}__newsletter,.ai-footer-{{ ai_gen_id }}__logo-column{grid-column:auto;}.ai-footer-{{ ai_gen_id }}__form{display:grid;gap:8px;} }
+{% endstyle %}
+
+<footer class="ai-footer-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-footer-{{ ai_gen_id }}__inner">
+    <div class="ai-footer-{{ ai_gen_id }}__grid">
+      <div class="ai-footer-{{ ai_gen_id }}__newsletter">
+        <h2 class="ai-footer-{{ ai_gen_id }}__heading">{{ block.settings.newsletter_heading }}</h2>
+        <p class="ai-footer-{{ ai_gen_id }}__subtitle">{{ block.settings.newsletter_subtitle }}</p>
+        {% form 'customer', class: ai_form_class %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <label class="ai-footer-{{ ai_gen_id }}__label" for="ai-footer-email-{{ ai_gen_id }}">Email address</label>
+          <input id="ai-footer-email-{{ ai_gen_id }}" class="ai-footer-{{ ai_gen_id }}__input" type="email" name="contact[email]" value="{{ form.email }}" placeholder="{{ block.settings.email_placeholder }}" autocomplete="email" required>
+          <button class="ai-footer-{{ ai_gen_id }}__button" type="submit">{{ block.settings.subscribe_label }}</button>
+        {% endform %}
+      </div>
+      <nav aria-label="Quick links"><h2 class="ai-footer-{{ ai_gen_id }}__heading">{{ block.settings.quick_heading }}</h2><ul class="ai-footer-{{ ai_gen_id }}__list">{% for link in linklists.main-menu.links %}<li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul></nav>
+      <nav aria-label="Company links"><h2 class="ai-footer-{{ ai_gen_id }}__heading">{{ block.settings.company_heading }}</h2><ul class="ai-footer-{{ ai_gen_id }}__list">{% for link in linklists.footer.links %}<li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul></nav>
+      <div class="ai-footer-{{ ai_gen_id }}__logo-column">
+        {% if settings.logo %}<img class="ai-footer-{{ ai_gen_id }}__logo" src="{{ settings.logo | image_url: width: 500 }}" alt="{{ shop.name | escape }}" width="{{ settings.logo.width }}" height="{{ settings.logo.height }}" loading="lazy">{% else %}<div class="ai-footer-{{ ai_gen_id }}__logo-placeholder">{{ 'image' | placeholder_svg_tag }}</div>{% endif %}
+        <div class="ai-footer-{{ ai_gen_id }}__socials">{% if settings.social_instagram_link != blank %}<a class="ai-footer-{{ ai_gen_id }}__social-link" href="{{ settings.social_instagram_link }}" aria-label="Instagram">IG</a>{% endif %}{% if settings.social_facebook_link != blank %}<a class="ai-footer-{{ ai_gen_id }}__social-link" href="{{ settings.social_facebook_link }}" aria-label="Facebook">FB</a>{% endif %}{% if settings.social_youtube_link != blank %}<a class="ai-footer-{{ ai_gen_id }}__social-link" href="{{ settings.social_youtube_link }}" aria-label="YouTube">YT</a>{% endif %}{% if settings.social_tiktok_link != blank %}<a class="ai-footer-{{ ai_gen_id }}__social-link" href="{{ settings.social_tiktok_link }}" aria-label="TikTok">TK</a>{% endif %}</div>
+      </div>
+    </div>
+    <div class="ai-footer-{{ ai_gen_id }}__bottom">{{ block.settings.copyright_text | replace: '[year]', 'now' | replace: 'now', '2026' }} {{ shop.name }}</div>
+  </div>
+</footer>
+
+{% schema %}{"name":"Redesigned footer","settings":[{"type":"text","id":"newsletter_heading","label":"Newsletter heading","default":"LET'S GET IN TOUCH"},{"type":"textarea","id":"newsletter_subtitle","label":"Newsletter subtitle","default":"Sign up for updates, new arrivals, and exclusive offers."},{"type":"text","id":"email_placeholder","label":"Email placeholder","default":"Enter your email"},{"type":"text","id":"subscribe_label","label":"Subscribe label","default":"SUBSCRIBE NOW"},{"type":"text","id":"quick_heading","label":"Quick links heading","default":"QUICK LINKS"},{"type":"text","id":"company_heading","label":"Company heading","default":"COMPANY"},{"type":"text","id":"copyright_text","label":"Copyright text","default":"© [year]"},{"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100}],"presets":[{"name":"Redesigned footer"}],"tag":null,"class":"redesigned-footer"}{% endschema %}
