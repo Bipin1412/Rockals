@@ -201,9 +201,9 @@
       },
       "scheme-collection-sort-black": {
         "settings": {
-          "background": "#f7f3e6",
+          "background": "#000000",
           "background_gradient": "",
-          "text": "#000000",
+          "text": "#ffffff",
           "button": "#68021f",
           "button_label": "#f7f3e6",
           "secondary_button_label": "#68021f",
