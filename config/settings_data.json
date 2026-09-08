@@ -198,6 +198,17 @@
           "secondary_button_label": "#f7f3e6",
           "shadow": "#121212"
         }
+      },
+      "scheme-collection-sort-black": {
+        "settings": {
+          "background": "#f7f3e6",
+          "background_gradient": "",
+          "text": "#000000",
+          "button": "#68021f",
+          "button_label": "#f7f3e6",
+          "secondary_button_label": "#68021f",
+          "shadow": "#121212"
+        }
       }
     }
   },
