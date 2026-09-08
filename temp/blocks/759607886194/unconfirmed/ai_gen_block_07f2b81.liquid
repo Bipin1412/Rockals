@@ -1,6 +1,344 @@
+{% doc %}
+  @prompt
+    can you design a modern looking footer according to our website content  
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-footer-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    background: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-footer-{{ ai_gen_id }}__inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 64px 5% 24px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__top {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(140px, 1fr));
+    gap: 48px;
+    padding-bottom: 56px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__brand {
+    max-width: 340px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__logo {
+    display: block;
+    width: {{ block.settings.logo_width }}px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 22px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__logo-placeholder {
+    width: {{ block.settings.logo_width }}px;
+    max-width: 100%;
+    margin-bottom: 22px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-footer-{{ ai_gen_id }}__logo-placeholder svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: rgba(247, 243, 230, 0.08);
+  }
+
+  .ai-footer-{{ ai_gen_id }}__heading {
+    margin: 0 0 18px;
+    color: {{ block.settings.heading_color }};
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__description {
+    margin: 0;
+    color: {{ block.settings.muted_text_color }};
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__link {
+    color: {{ block.settings.text_color }};
+    font-size: 15px;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__link:hover,
+  .ai-footer-{{ ai_gen_id }}__link:focus-visible {
+    color: {{ block.settings.accent_color }};
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__newsletter {
+    max-width: 520px;
+    padding-top: 30px;
+    border-top: 1px solid {{ block.settings.divider_color }};
+  }
+
+  .ai-footer-{{ ai_gen_id }}__newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__input {
+    min-width: 0;
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid {{ block.settings.input_border_color }};
+    border-radius: {{ block.settings.input_radius }}px;
+    background: transparent;
+    color: {{ block.settings.text_color }};
+    font: inherit;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__input::placeholder {
+    color: {{ block.settings.muted_text_color }};
+    opacity: 1;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__button {
+    padding: 14px 20px;
+    border: 1px solid {{ block.settings.accent_color }};
+    border-radius: {{ block.settings.button_radius }}px;
+    background: {{ block.settings.accent_color }};
+    color: {{ block.settings.button_text_color }};
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__button:hover,
+  .ai-footer-{{ ai_gen_id }}__button:focus-visible {
+    background: {{ block.settings.button_hover_color }};
+    border-color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-footer-{{ ai_gen_id }}__message {
+    margin: 12px 0 0;
+    color: {{ block.settings.muted_text_color }};
+    font-size: 14px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 22px;
+    border-top: 1px solid {{ block.settings.divider_color }};
+  }
+
+  .ai-footer-{{ ai_gen_id }}__copyright,
+  .ai-footer-{{ ai_gen_id }}__social-link {
+    color: {{ block.settings.muted_text_color }};
+    font-size: 13px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__social-link {
+    text-decoration: none;
+  }
+
+  .ai-footer-{{ ai_gen_id }}__social-link:hover,
+  .ai-footer-{{ ai_gen_id }}__social-link:focus-visible {
+    color: {{ block.settings.accent_color }};
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-footer-{{ ai_gen_id }}__inner {
+      padding: 48px 20px 20px;
+    }
+
+    .ai-footer-{{ ai_gen_id }}__top {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 36px 24px;
+      padding-bottom: 40px;
+    }
+
+    .ai-footer-{{ ai_gen_id }}__brand,
+    .ai-footer-{{ ai_gen_id }}__newsletter {
+      grid-column: 1 / -1;
+      max-width: none;
+    }
+
+    .ai-footer-{{ ai_gen_id }}__bottom {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-footer-{{ ai_gen_id }}__newsletter-form {
+      flex-direction: column;
+    }
+  }
+{% endstyle %}
+
+<footer class="ai-footer-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-footer-{{ ai_gen_id }}__inner">
+    <div class="ai-footer-{{ ai_gen_id }}__top">
+      <div class="ai-footer-{{ ai_gen_id }}__brand">
+        {% if block.settings.logo %}
+          <img class="ai-footer-{{ ai_gen_id }}__logo" src="{{ block.settings.logo | image_url: width: 600 }}" alt="{{ block.settings.logo.alt | default: shop.name | escape }}" width="{{ block.settings.logo.width }}" height="{{ block.settings.logo.height }}" loading="lazy">
+        {% else %}
+          <div class="ai-footer-{{ ai_gen_id }}__logo-placeholder">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+        {% if block.settings.description != blank %}
+          <div class="ai-footer-{{ ai_gen_id }}__description">{{ block.settings.description }}</div>
+        {% endif %}
+      </div>
+
+      <div>
+        <h2 class="ai-footer-{{ ai_gen_id }}__heading">{{ block.settings.shop_heading }}</h2>
+        <ul class="ai-footer-{{ ai_gen_id }}__links">
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.shop_link_1_url }}">{{ block.settings.shop_link_1_label }}</a></li>
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.shop_link_2_url }}">{{ block.settings.shop_link_2_label }}</a></li>
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.shop_link_3_url }}">{{ block.settings.shop_link_3_label }}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="ai-footer-{{ ai_gen_id }}__heading">{{ block.settings.support_heading }}</h2>
+        <ul class="ai-footer-{{ ai_gen_id }}__links">
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.support_link_1_url }}">{{ block.settings.support_link_1_label }}</a></li>
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.support_link_2_url }}">{{ block.settings.support_link_2_label }}</a></li>
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.support_link_3_url }}">{{ block.settings.support_link_3_label }}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="ai-footer-{{ ai_gen_id }}__heading">{{ block.settings.company_heading }}</h2>
+        <ul class="ai-footer-{{ ai_gen_id }}__links">
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.company_link_1_url }}">{{ block.settings.company_link_1_label }}</a></li>
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.company_link_2_url }}">{{ block.settings.company_link_2_label }}</a></li>
+          <li><a class="ai-footer-{{ ai_gen_id }}__link" href="{{ block.settings.company_link_3_url }}">{{ block.settings.company_link_3_label }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ai-footer-{{ ai_gen_id }}__newsletter">
+      <h2 class="ai-footer-{{ ai_gen_id }}__heading">{{ block.settings.newsletter_heading }}</h2>
+      <div class="ai-footer-{{ ai_gen_id }}__description">{{ block.settings.newsletter_text }}</div>
+      {% form 'customer' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="ai-footer-{{ ai_gen_id }}__newsletter-form">
+          <label class="visually-hidden" for="ai-footer-email-{{ ai_gen_id }}">{{ block.settings.email_label }}</label>
+          <input id="ai-footer-email-{{ ai_gen_id }}" class="ai-footer-{{ ai_gen_id }}__input" type="email" name="contact[email" placeholder="{{ block.settings.email_placeholder }}" autocomplete="email" required>
+          <button class="ai-footer-{{ ai_gen_id }}__button" type="submit">{{ block.settings.button_label }}</button>
+        </div>
+        {% if form.posted_successfully? %}<p class="ai-footer-{{ ai_gen_id }}__message">{{ block.settings.success_message }}</p>{% endif %}
+        {% if form.errors %}<p class="ai-footer-{{ ai_gen_id }}__message">{{ form.errors.messages.email }}</p>{% endif %}
+      {% endform %}
+    </div>
+
+    <div class="ai-footer-{{ ai_gen_id }}__bottom">
+      <div class="ai-footer-{{ ai_gen_id }}__copyright">© {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ block.settings.copyright_text }}</div>
+      <div class="ai-footer-{{ ai_gen_id }}__social">
+        {% if block.settings.instagram_url != blank %}<a class="ai-footer-{{ ai_gen_id }}__social-link" href="{{ block.settings.instagram_url }}" aria-label="Instagram">Instagram</a>{% endif %}
+        {% if block.settings.facebook_url != blank %}<a class="ai-footer-{{ ai_gen_id }}__social-link" href="{{ block.settings.facebook_url }}" aria-label="Facebook">Facebook</a>{% endif %}
+        {% if block.settings.youtube_url != blank %}<a class="ai-footer-{{ ai_gen_id }}__social-link" href="{{ block.settings.youtube_url }}" aria-label="YouTube">YouTube</a>{% endif %}
+      </div>
+    </div>
+  </div>
+</footer>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Modern footer",
+  "tag": null,
+  "class": "modern-footer-block",
+  "settings": [
+    {"type":"header","content":"Brand"},
+    {"type":"image_picker","id":"logo","label":"Logo"},
+    {"type":"range","id":"logo_width","label":"Logo width","min":60,"max":240,"step":10,"unit":"px","default":120},
+    {"type":"richtext","id":"description","label":"Description","default":"<p>Premium sneakers and lifestyle products, selected for those who value design, quality and individuality.</p>"},
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"header","content":"Shop links"},
+    {"type":"text","id":"shop_heading","label":"Heading","default":"Shop"},
+    {"type":"text","id":"shop_link_1_label","label":"Link 1 label","default":"New arrivals"},
+    {"type":"url","id":"shop_link_1_url","label":"Link 1"},
+    {"type":"text","id":"shop_link_2_label","label":"Link 2 label","default":"Sneakers"},
+    {"type":"url","id":"shop_link_2_url","label":"Link 2"},
+    {"type":"text","id":"shop_link_3_label","label":"Link 3 label","default":"Collections"},
+    {"type":"url","id":"shop_link_3_url","label":"Link 3"},
+    {"type":"header","content":"Support links"},
+    {"type":"text","id":"support_heading","label":"Heading","default":"Support"},
+    {"type":"text","id":"support_link_1_label","label":"Link 1 label","default":"Contact us"},
+    {"type":"url","id":"support_link_1_url","label":"Link 1"},
+    {"type":"text","id":"support_link_2_label","label":"Link 2 label","default":"Shipping policy"},
+    {"type":"url","id":"support_link_2_url","label":"Link 2"},
+    {"type":"text","id":"support_link_3_label","label":"Link 3 label","default":"FAQ"},
+    {"type":"url","id":"support_link_3_url","label":"Link 3"},
+    {"type":"header","content":"Company links"},
+    {"type":"text","id":"company_heading","label":"Heading","default":"Company"},
+    {"type":"text","id":"company_link_1_label","label":"Link 1 label","default":"About us"},
+    {"type":"url","id":"company_link_1_url","label":"Link 1"},
+    {"type":"text","id":"company_link_2_label","label":"Link 2 label","default":"Privacy policy"},
+    {"type":"url","id":"company_link_2_url","label":"Link 2"},
+    {"type":"text","id":"company_link_3_label","label":"Link 3 label","default":"Terms of service"},
+    {"type":"url","id":"company_link_3_url","label":"Link 3"},
+    {"type":"header","content":"Newsletter"},
+    {"type":"text","id":"newsletter_heading","label":"Heading","default":"Stay in the loop"},
+    {"type":"richtext","id":"newsletter_text","label":"Description","default":"<p>Get first access to new drops, curated edits and exclusive offers.</p>"},
+    {"type":"text","id":"email_label","label":"Email label","default":"Email address"},
+    {"type":"text","id":"email_placeholder","label":"Placeholder","default":"Your email address"},
+    {"type":"text","id":"button_label","label":"Button label","default":"Subscribe"},
+    {"type":"text","id":"success_message","label":"Success message","default":"Thanks for subscribing."},
+    {"type":"text","id":"copyright_text","label":"Copyright text","default":"All rights reserved."},
+    {"type":"header","content":"Social links"},
+    {"type":"url","id":"instagram_url","label":"Instagram"},
+    {"type":"url","id":"facebook_url","label":"Facebook"},
+    {"type":"url","id":"youtube_url","label":"YouTube"},
+    {"type":"header","content":"Colors"},
+    {"type":"color","id":"background_color","label":"Background","default":"#030206"},
+    {"type":"color","id":"text_color","label":"Text","default":"#F7F3E6"},
+    {"type":"color","id":"heading_color","label":"Headings","default":"#F7F3E6"},
+    {"type":"color","id":"muted_text_color","label":"Muted text","default":"#C7C2B7"},
+    {"type":"color","id":"accent_color","label":"Accent","default":"#AA0236"},
+    {"type":"color","id":"button_text_color","label":"Button text","default":"#F7F3E6"},
+    {"type":"color","id":"button_hover_color","label":"Button hover","default":"#68021F"},
+    {"type":"color","id":"divider_color","label":"Dividers","default":"#3A3439"},
+    {"type":"color","id":"input_border_color","label":"Input border","default":"#817B72"},
+    {"type":"font_picker","id":"heading_font","label":"Heading font","default":"archivo_black_n4"},
+    {"type":"range","id":"input_radius","label":"Input radius","min":0,"max":24,"step":2,"unit":"px","default":0},
+    {"type":"range","id":"button_radius","label":"Button radius","min":0,"max":24,"step":2,"unit":"px","default":0}
+  ],
+  "presets": [{"name":"Modern footer"}]
+}
 {% endschema %}
