@@ -1,0 +1,63 @@
+{% style %}
+  .rockals-footer { display: block; width: 100%; background: #030206; color: #f7f3e6; border-top: 1px solid #332d35; }
+  .rockals-footer__inner { max-width: 1200px; margin: 0 auto; padding: 65px 24px 20px; }
+  .rockals-footer__top { display: grid; grid-template-columns: minmax(0, 1.35fr) repeat(2, minmax(150px, 1fr)); gap: 48px; padding-bottom: 52px; }
+  .rockals-footer__brand-name { display: inline-block; margin: 0 0 18px; color: #aa0236; font-size: 28px; font-weight: 800; letter-spacing: 0.08em; line-height: 1; }
+  .rockals-footer__tagline { margin: 0; color: #c7c2b5; font-size: 14px; line-height: 1.7; }
+  .rockals-footer__heading { margin: 2px 0 20px; color: #f7f3e6; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .rockals-footer__list { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; }
+  .rockals-footer__link { color: #c7c2b5; font-size: 14px; text-decoration: none; transition: color 0.2s ease; }
+  .rockals-footer__link:hover { color: #aa0236; text-decoration: underline; text-underline-offset: 4px; }
+  .rockals-footer__bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 20px; border-top: 1px solid #332d35; }
+  .rockals-footer__copyright { margin: 0; color: #c7c2b5; font-size: 12px; }
+  .rockals-footer__accent { width: 42px; height: 3px; background: #aa0236; }
+  @media screen and (max-width: 749px) {
+    .rockals-footer__inner { padding: 40px 20px 20px; }
+    .rockals-footer__top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; padding-bottom: 38px; }
+    .rockals-footer__top > div:first-child { grid-column: 1 / -1; }
+    .rockals-footer__bottom { flex-direction: column; align-items: flex-start; }
+  }
+{% endstyle %}
+
+<footer class="rockals-footer">
+  <div class="rockals-footer__inner">
+    <div class="rockals-footer__top">
+
+      <div>
+        <p class="rockals-footer__brand-name">ROCKALS</p>
+        <p class="rockals-footer__tagline">Premium sneakers and lifestyle essentials, made for every move.</p>
+      </div>
+
+      <nav aria-label="Quick links">
+        <h2 class="rockals-footer__heading">QUICK LINKS</h2>
+        <ul class="rockals-footer__list">
+          <li><a class="rockals-footer__link" href="/collections/all">Product</a></li>
+          <li><a class="rockals-footer__link" href="/pages/faq">FAQ</a></li>
+          <li><a class="rockals-footer__link" href="/pages/size-guide">Size Guide</a></li>
+          <li><a class="rockals-footer__link" href="/pages/contact-us">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Policies">
+        <h2 class="rockals-footer__heading">POLICIES</h2>
+        <ul class="rockals-footer__list">
+          <li><a class="rockals-footer__link" href="/pages/shipping-policy">Shipping Policy</a></li>
+          <li><a class="rockals-footer__link" href="/pages/return-refund-policy">Return &amp; Refund Policy</a></li>
+          <li><a class="rockals-footer__link" href="/policies/privacy-policy">Privacy Policy</a></li>
+          <li><a class="rockals-footer__link" href="/pages/terms-conditions">Terms &amp; Conditions</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="rockals-footer__bottom">
+      <p class="rockals-footer__copyright">© 2026 ROCKALS. All rights reserved.</p>
+      <span class="rockals-footer__accent" aria-hidden="true"></span>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Modern Footer",
+}
+{% endschema %}
