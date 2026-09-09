@@ -115,8 +115,8 @@
             "vertical_padding": 32,
             "desktop_width_percent": 100,
             "transparent_background": false,
-            "background_color": "#FFFFFF",
-            "text_color": "#000000"
+            "background_color": "#000000",
+            "text_color": "#FFFFFF"
           },
           "blocks": {}
         }
