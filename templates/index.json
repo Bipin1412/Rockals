@@ -112,11 +112,11 @@
             "font_size": 36,
             "mobile_font_size": 28,
             "letter_spacing": 1,
-            "vertical_padding": 32,
+            "vertical_padding": 16,
             "desktop_width_percent": 100,
             "transparent_background": false,
-            "background_color": "#030206",
-            "text_color": "#f7f3e6"
+            "background_color": "#000000",
+            "text_color": "#FFFFFF"
           },
           "blocks": {}
         }
@@ -345,12 +345,10 @@
             "focus_color": "#f7f3e6"
           },
           "blocks": {}
-        },
-        
+        }
       },
       "block_order": [
-        "ai_gen_block_ff0a48b_XKCL7b",
-        
+        "ai_gen_block_ff0a48b_XKCL7b"
       ],
       "settings": {}
     },

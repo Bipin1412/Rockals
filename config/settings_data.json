@@ -17,7 +17,7 @@
     "type_body_font": "geist_n4",
     "body_scale": 110,
     "page_width": 1600,
-    "spacing_sections": 48,
+    "spacing_sections": 16,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": true,
@@ -140,6 +140,10 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "modern-footer": {
+        "type": "modern-footer",
+        "settings": {}
       }
     },
     "content_for_index": [],
