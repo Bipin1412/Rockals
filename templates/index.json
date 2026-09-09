@@ -241,6 +241,24 @@
     "1788504645c1a1ce32": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_f152659_qr8dBx": {
+          "type": "ai_gen_block_f152659",
+          "name": "Collection heading",
+          "settings": {
+            "heading_text": "Explore Our Collection",
+            "heading_font": "assistant_n4",
+            "text_alignment": "center",
+            "font_size": 36,
+            "mobile_font_size": 28,
+            "letter_spacing": 1,
+            "vertical_padding": 32,
+            "desktop_width_percent": 100,
+            "transparent_background": false,
+            "background_color": "#030206",
+            "text_color": "#f7f3e6"
+          },
+          "blocks": {}
+        },
         "ai_gen_block_d571903_BLjfPc": {
           "type": "ai_gen_block_d571903",
           "settings": {
@@ -277,6 +295,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_f152659_qr8dBx",
         "ai_gen_block_d571903_BLjfPc"
       ],
       "settings": {}
