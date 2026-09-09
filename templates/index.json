@@ -102,10 +102,28 @@
             "compare_color": "#666666"
           },
           "blocks": {}
+        },
+        "ai_gen_block_f152659_CE4PYD": {
+          "type": "ai_gen_block_f152659",
+          "settings": {
+            "heading_text": "Explore Our Collection",
+            "heading_font": "assistant_n4",
+            "text_alignment": "center",
+            "font_size": 36,
+            "mobile_font_size": 28,
+            "letter_spacing": 1,
+            "vertical_padding": 32,
+            "desktop_width_percent": 100,
+            "transparent_background": false,
+            "background_color": "#FFFFFF",
+            "text_color": "#000000"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_fef3589_KKHGTf"
+        "ai_gen_block_fef3589_KKHGTf",
+        "ai_gen_block_f152659_CE4PYD"
       ],
       "settings": {}
     },
@@ -162,7 +180,7 @@
           "settings": {
             "image": "shopify://shop_images/Rockals_Banner_Image.jpg",
             "image_overlay_opacity": 0,
-            "heading": "Explore Our Collection",
+            "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
