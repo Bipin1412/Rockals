@@ -11,6 +11,51 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "blocks_GP6jP3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_35d44a6_w9X3tW": {
+          "type": "ai_gen_block_35d44a6",
+          "settings": {
+            "brand_name": "ROCKALS",
+            "tagline": "Premium sneakers and lifestyle essentials, made for every move.",
+            "copyright_text": "© 2026 ROCKALS. All rights reserved.",
+            "links_heading": "QUICK LINKS",
+            "product_label": "Product",
+            "product_link": "/collections/all",
+            "faq_label": "FAQ",
+            "faq_link": "/pages/faq",
+            "size_guide_label": "Size Guide",
+            "size_guide_link": "/pages/size-guide",
+            "contact_label": "Contact Us",
+            "contact_link": "/pages/contact-us",
+            "policies_heading": "POLICIES",
+            "shipping_label": "Shipping Policy",
+            "shipping_link": "/pages/shipping-policy",
+            "returns_label": "Return & Refund Policy",
+            "returns_link": "",
+            "privacy_label": "Privacy Policy",
+            "privacy_link": "shopify://policies/privacy-policy",
+            "terms_label": "Terms & Conditions",
+            "terms_link": "/pages/terms-conditions",
+            "desktop_width_percent": 100,
+            "content_width": 1200,
+            "vertical_padding": 65,
+            "background_color": "#030206",
+            "text_color": "#f7f3e6",
+            "muted_text_color": "#c7c2b5",
+            "accent_color": "#aa0236",
+            "border_color": "#332d35"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_35d44a6_w9X3tW"
+      ],
+      "name": "Modern links footer",
+      "settings": {}
+    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -51,6 +96,7 @@
     }
   },
   "order": [
+    "blocks_GP6jP3",
     "footer",
     "custom_liquid_yXgbVx"
   ]
