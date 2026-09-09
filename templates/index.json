@@ -374,10 +374,10 @@
             "content_width": 1200,
             "vertical_padding": 65,
             "background_color": "#030206",
-            "text_color": "#F7F3E6",
-            "muted_text_color": "#C7C2B5",
-            "accent_color": "#AA0236",
-            "border_color": "#332D35"
+            "text_color": "#f7f3e6",
+            "muted_text_color": "#c7c2b5",
+            "accent_color": "#aa0236",
+            "border_color": "#332d35"
           },
           "blocks": {}
         }
@@ -399,6 +399,10 @@
     "1788846810c42497c2": {
       "type": "_blocks",
       "settings": {}
+    },
+    "1788935240c8b18cde": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -414,6 +418,7 @@
     "17885055314534da37",
     "17887761927d34310a",
     "1788783810444c8517",
-    "1788846810c42497c2"
+    "1788846810c42497c2",
+    "1788935240c8b18cde"
   ]
 }
