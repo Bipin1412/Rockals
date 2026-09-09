@@ -13,91 +13,16 @@
   "sections": {
     "blocks_GP6jP3": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_35d44a6_w9X3tW": {
-          "type": "ai_gen_block_35d44a6",
-          "settings": {
-            "brand_name": "ROCKALS",
-            "tagline": "Premium sneakers and lifestyle essentials, made for every move.",
-            "copyright_text": "© 2026 ROCKALS. All rights reserved.",
-            "links_heading": "QUICK LINKS",
-            "product_label": "Product",
-            "product_link": "/collections/all",
-            "faq_label": "FAQ",
-            "faq_link": "/pages/faq",
-            "size_guide_label": "Size Guide",
-            "size_guide_link": "/pages/size-guide",
-            "contact_label": "Contact Us",
-            "contact_link": "/pages/contact-us",
-            "policies_heading": "POLICIES",
-            "shipping_label": "Shipping Policy",
-            "shipping_link": "/pages/shipping-policy",
-            "returns_label": "Return & Refund Policy",
-            "returns_link": "",
-            "privacy_label": "Privacy Policy",
-            "privacy_link": "shopify://policies/privacy-policy",
-            "terms_label": "Terms & Conditions",
-            "terms_link": "/pages/terms-conditions",
-            "desktop_width_percent": 100,
-            "content_width": 1200,
-            "vertical_padding": 65,
-            "background_color": "#030206",
-            "text_color": "#f7f3e6",
-            "muted_text_color": "#c7c2b5",
-            "accent_color": "#aa0236",
-            "border_color": "#332d35"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_35d44a6_w9X3tW"
-      ],
       "name": "Modern links footer",
       "settings": {}
     },
     "footer": {
       "type": "footer",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "brand_name": "ROCKALS",
-        "newsletter_enable": true,
-        "newsletter_heading": "Join our email list",
-        "newsletter_subheading": "Get exclusive deals and early access to new products.",
-        "quick_links_heading": "QUICK LINKS",
-        "quick_link_1_url": "/pages/product-details",
-        "quick_link_2_url": "/pages/faq",
-        "quick_link_3_url": "/pages/size-guide",
-        "quick_link_4_url": "/pages/contact-us",
-        "policies_heading": "POLICIES",
-        "shipping_policy_url": "/pages/shipping-policy",
-        "return_policy_url": "/pages/return-refund-policy",
-        "privacy_policy_url": "",
-        "terms_policy_url": "/pages/terms-conditions",
-        "social_heading": "SOCIAL",
-        "instagram_url": "https://www.instagram.com/",
-        "facebook_url": "https://www.facebook.com/",
-        "youtube_url": "https://www.youtube.com/",
-        "linkedin_url": "https://www.linkedin.com/",
-        "margin_top": 0,
-        "padding_top": 48,
-        "padding_bottom": 16
-      }
-    },
-    "custom_liquid_yXgbVx": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
+      "settings": {}
     }
   },
   "order": [
     "blocks_GP6jP3",
-    "footer",
-    "custom_liquid_yXgbVx"
+    "footer"
   ]
 }
