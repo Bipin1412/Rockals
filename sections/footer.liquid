@@ -1,4 +1,4 @@
-{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign quick_link_1_url = section.settings.quick_link_1_url
@@ -643,4 +643,4 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} {% endcomment %}
